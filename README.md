@@ -4,27 +4,28 @@
 
 Welcome to the **Veeva Integrated Curriculum** repository!
 
-This repository documents my learning journey, technical training, hands-on exercises, assignments, and practical projects while preparing for a career in **Quality Assurance (QA) Automation Engineering**.
+This repository documents my technical learning journey, hands-on training, programming exercises, assignments, and practical projects while preparing for a career in **Quality Assurance (QA) Automation Engineering**.
 
-The objective is to strengthen programming fundamentals, problem-solving abilities, software testing knowledge, database skills, and practical experience with industry tools and technologies.
+The curriculum focuses on developing programming fundamentals, problem-solving abilities, database knowledge, software testing skills, Agile methodologies, and practical experience with industry tools.
 
 ---
 
 ## About This Repository
 
-The Veeva Integrated Curriculum is organized into multiple learning modules. Each module contains practical exercises, technical concepts, assignments, and project documentation.
+The Veeva Integrated Curriculum combines theoretical learning with practical implementation.
 
-The repository focuses on combining theoretical knowledge with hands-on implementation.
+It is organized into different training modules, with each module containing exercises, case studies, assignments, and project documentation.
 
 ### Learning Objectives
 
-* Develop strong programming fundamentals using Java.
-* Understand Object-Oriented Programming concepts.
+* Strengthen Java programming fundamentals.
+* Understand Object-Oriented Programming.
 * Practise Data Structures and Algorithms.
-* Learn database management and SQL.
+* Learn SQL and database management.
+* Develop practical application-building experience.
 * Understand software testing methodologies.
-* Gain practical experience with Jira and Agile Scrum.
-* Learn test case design and test management using Xray.
+* Learn Agile Scrum and Jira project management.
+* Practise test case design and test management using Xray.
 * Develop debugging and problem-solving skills.
 * Maintain professional technical documentation using Git and GitHub.
 
@@ -32,31 +33,47 @@ The repository focuses on combining theoretical knowledge with hands-on implemen
 
 ## Technology Stack and Tools
 
-| Category           | Technologies / Tools   |
-| ------------------ | ---------------------- |
-| Programming        | Java                   |
-| Database           | SQL, MySQL             |
-| Version Control    | Git, GitHub            |
-| IDE                | IntelliJ IDEA, VS Code |
-| Project Management | Jira                   |
-| Agile Methodology  | Scrum                  |
-| Test Management    | Xray                   |
-| Documentation      | Markdown               |
-| Operating System   | Windows                |
+| Category              | Technologies / Tools   |
+| --------------------- | ---------------------- |
+| Programming Languages | Java, SQL              |
+| Database              | MySQL                  |
+| Backend Concepts      | JDBC, DAO Pattern, OOP |
+| Build Tool            | Maven                  |
+| Version Control       | Git, GitHub            |
+| IDE                   | IntelliJ IDEA, VS Code |
+| Project Management    | Jira                   |
+| Agile Methodology     | Scrum                  |
+| Test Management       | Xray                   |
+| Documentation         | Markdown               |
+| Operating System      | Windows                |
 
-Additional technologies and tools will be included as the curriculum progresses.
+Additional technologies will be included as the curriculum progresses.
 
 ---
 
-## Repository Structure
+# Repository Structure
 
 ```text
 Veeva-Integrated-Curriculum/
 │
 ├── Java-Training/
-│   └── Java Programming Exercises and Case Studies
+│   │
+│   ├── Case Studies on Files/
+│   │   ├── data/
+│   │   ├── src/
+│   │   └── README.md
+│   │
+│   └── ECommerce OOP Based Project/
+│       └── EcommerceProject/
+│           ├── pom.xml
+│           ├── .gitignore
+│           └── src/
+│               └── main/
+│                   └── java/
+│                       └── com/ecommerce/
 │
 ├── Jira-Training/
+│   │
 │   └── ShopEasy-QA/
 │       ├── 01-Project-Overview/
 │       ├── 02-Requirements-and-User-Stories/
@@ -73,7 +90,7 @@ Veeva-Integrated-Curriculum/
 └── README.md
 ```
 
-The repository structure will expand as additional training modules and assignments are completed.
+The structure will expand as additional training modules and practical projects are completed.
 
 ---
 
@@ -81,7 +98,7 @@ The repository structure will expand as additional training modules and assignme
 
 ## 1. Java Training
 
-The Java Training module focuses on developing programming fundamentals and understanding Java concepts through practical exercises and case studies.
+The Java Training module focuses on developing programming skills through practical exercises, case studies, and application development.
 
 ### Topics Covered
 
@@ -95,33 +112,38 @@ The Java Training module focuses on developing programming fundamentals and unde
 * File Handling
 * Text File Operations
 * Object Serialization and Deserialization
+* JDBC and Database Connectivity
+* DAO Pattern
+* CRUD Operations
 
-### Practical Case Studies
+### 1.1 Case Studies on File Handling
+
+This module contains three practical Java case studies focused on file operations and student record management.
 
 #### Case Study 01 – Introduction to File Handling
 
-Understanding the Java `File` class and performing basic file operations.
+**Objective:** Understand the Java `File` class and perform basic file operations.
 
 **Concepts:**
 
 * Creating and checking files.
-* File and directory identification.
-* Read and write permissions.
-* Absolute and relative paths.
-* File creation and permissions.
+* Identifying files and directories.
+* Checking read and write permissions.
+* Retrieving absolute and relative paths.
+* Creating files and managing permissions.
 
 #### Case Study 02 – Student Management System Using Text Files
 
-Developing a console-based Student Management System using text-file storage.
+**Objective:** Develop a console-based Student Management System using text-file storage.
 
 **Features:**
 
-* Add Student Record
-* View All Student Records
-* Search Student by Roll Number
-* Search Student by Name
-* Update Student Record
-* Delete Student Record
+* Add Student Record.
+* View All Student Records.
+* Search Student by Roll Number.
+* Search Student by Name.
+* Update Student Record.
+* Delete Student Record.
 
 **Concepts:**
 
@@ -133,16 +155,16 @@ Developing a console-based Student Management System using text-file storage.
 
 #### Case Study 03 – Student Management System Using Serialization
 
-Implementing student record management using Java Object Serialization and Deserialization.
+**Objective:** Implement student record management using Java Object Serialization and Deserialization.
 
 **Features:**
 
-* Add Student Record
-* View All Student Records
-* Search Student by Roll Number
-* Search Student by Name
-* Update Student Record
-* Delete Student Record
+* Add Student Record.
+* View All Student Records.
+* Search Student by Roll Number.
+* Search Student by Name.
+* Update Student Record.
+* Delete Student Record.
 
 **Concepts:**
 
@@ -154,44 +176,127 @@ Implementing student record management using Java Object Serialization and Deser
 
 ---
 
+### 1.2 Ecommerce Application – OOP Based Project
+
+**Project Name:** Ecommerce OOP Based Project
+
+**Objective:** Develop a console-based Ecommerce application using Java Object-Oriented Programming principles and database connectivity.
+
+The project focuses on implementing the fundamental operations of an online shopping application.
+
+**Technologies:**
+
+* Java
+* Maven
+* MySQL
+* JDBC
+* IntelliJ IDEA
+
+**Application Features:**
+
+* Customer Registration.
+* Customer Login.
+* Product Management.
+* Product Listing.
+* Shopping Cart.
+* Cart Item Management.
+* Checkout.
+* Order Creation.
+* Order Management.
+
+**Important Concepts:**
+
+* Object-Oriented Programming.
+* Classes and Objects.
+* Encapsulation.
+* Model Classes.
+* DAO (Data Access Object) Pattern.
+* Database Connectivity.
+* CRUD Operations.
+* Collections Framework.
+* Separation of Application Logic.
+
+**Project Structure:**
+
+The application follows a package-based structure:
+
+```text
+EcommerceProject/
+│
+├── pom.xml
+│
+└── src/
+    └── main/
+        └── java/
+            └── com/
+                └── ecommerce/
+                    ├── Main.java
+                    ├── HomeMenu.java
+                    ├── LoginForm.java
+                    ├── RegistrationForm.java
+                    │
+                    ├── config/
+                    │   └── DBConnection.java
+                    │
+                    ├── dao/
+                    │   ├── CustomerDAO.java
+                    │   └── ProductDAO.java
+                    │
+                    ├── model/
+                    │   ├── Customer.java
+                    │   ├── Product.java
+                    │   ├── Cart.java
+                    │   ├── CartItem.java
+                    │   └── Order.java
+                    │
+                    └── service/
+                        └── OrderService.java
+```
+
+The application is being developed incrementally, with additional functionality added as the project progresses.
+
+---
+
 ## 2. Jira Training
 
 The Jira Training module focuses on understanding Agile project management and practical Scrum implementation using Jira.
 
 ### Topics Covered
 
-* Jira Project Creation and Configuration
-* Scrum Project Management
-* Epics and User Stories
-* Tasks and Subtasks
-* Product Backlog Management
-* Sprint Planning
-* Sprint Execution
-* Issue Tracking
-* Bug Management
-* Jira Query Language (JQL)
-* Jira Dashboards
-* Project Documentation
+* Jira Project Creation and Configuration.
+* Scrum Project Management.
+* Epics and User Stories.
+* Tasks and Subtasks.
+* Product Backlog Management.
+* Sprint Planning.
+* Sprint Execution.
+* Issue Tracking.
+* Bug Management.
+* Jira Query Language (JQL).
+* Jira Dashboards.
+* Project Documentation.
 
 ### Practical Project – ShopEasy QA
 
-**Project Name:** ShopEasy QA
-**Application:** ShopEasy Online Shopping Application
-**Jira Project Key:** SEQ
-**Methodology:** Agile Scrum
-**Test Management:** Xray
+| Field            | Details                              |
+| ---------------- | ------------------------------------ |
+| Project Name     | ShopEasy QA                          |
+| Application      | ShopEasy Online Shopping Application |
+| Jira Project Key | SEQ                                  |
+| Methodology      | Agile Scrum                          |
+| Test Management  | Xray                                 |
 
-ShopEasy QA is a practical QA project created to understand how Jira and Xray can be used to manage software testing activities.
+ShopEasy QA is a practical QA project created to understand how Jira and Xray support software testing activities.
 
 ### Project Modules
 
-1. Account and Login
-2. Product Discovery and Shopping
-3. Cart and Checkout
+1. Account and Login.
+2. Product Discovery and Shopping.
+3. Cart and Checkout.
 
 ### Project Activities
 
-* Created Jira Scrum project.
+* Created a Jira Scrum project.
 * Created Epics and User Stories.
 * Organized requirements into two sprints.
 * Created and documented Xray Test Cases.
@@ -199,48 +304,48 @@ ShopEasy QA is a practical QA project created to understand how Jira and Xray ca
 * Created a Test Plan and Test Execution.
 * Documented Bug Management and defect lifecycle.
 * Prepared JQL queries for issue tracking.
-* Planned a centralized QA dashboard.
+* Documented QA dashboard configuration.
 * Prepared a Test Summary Report.
 
 **Project Documentation:**
 
-[Explore ShopEasy QA Project](Jira-Training/ShopEasy-QA/README.md)
+[Explore ShopEasy QA](Jira-Training/ShopEasy-QA/README.md)
 
 ---
 
-## Learning Approach
+# Learning Approach
 
 The curriculum follows a practical learning approach:
 
 ```text
-        Learn Concepts
-              |
-              v
-       Understand Theory
-              |
-              v
-      Perform Exercises
-              |
-              v
-      Complete Assignments
-              |
-              v
-      Build Practical Projects
-              |
-              v
-      Document the Learning
-              |
-              v
-       Track Improvements
+       Learn Concepts
+             |
+             v
+      Understand Theory
+             |
+             v
+     Perform Exercises
+             |
+             v
+     Complete Assignments
+             |
+             v
+     Build Practical Projects
+             |
+             v
+     Document the Learning
+             |
+             v
+      Track Improvements
 ```
 
-Each module is maintained with its own exercises, implementation details, and supporting documentation wherever applicable.
+Each module is maintained with relevant exercises, implementation details, and supporting documentation.
 
 ---
 
-## Repository Documentation Standards
+# Repository Documentation Standards
 
-To maintain consistency across the repository:
+To maintain consistency:
 
 * Use Markdown for technical documentation.
 * Organize materials into meaningful folders.
@@ -249,28 +354,31 @@ To maintain consistency across the repository:
 * Maintain clear file and folder names.
 * Include screenshots and supporting evidence where relevant.
 * Use Git commits to track changes.
-* Keep project documentation updated as work progresses.
+* Keep project documentation updated.
+* Clearly distinguish completed and pending activities.
 
 ---
 
-## Current Learning Progress
+# Current Learning Progress
 
-| Module             | Focus Area                                       | Status      |
-| ------------------ | ------------------------------------------------ | ----------- |
-| Java Training      | Java fundamentals and file handling case studies | In Progress |
-| Jira Training      | Agile Scrum and Jira project management          | In Progress |
-| ShopEasy QA        | Practical QA project using Jira and Xray         | In Progress |
-| Additional Modules | Upcoming technical training                      | Planned     |
+| Module                 | Focus Area                                       | Status      |
+| ---------------------- | ------------------------------------------------ | ----------- |
+| Java Training          | Java fundamentals and file handling case studies | In Progress |
+| Java Ecommerce Project | OOP-based Ecommerce application                  | In Progress |
+| Jira Training          | Agile Scrum and Jira project management          | In Progress |
+| ShopEasy QA            | Practical QA project using Jira and Xray         | In Progress |
+| Additional Modules     | Upcoming technical training                      | Planned     |
 
-Progress statuses will be updated as training activities and assignments are completed.
+Progress will be updated as training activities and assignments are completed.
 
 ---
 
-## Version Control
+# Version Control
 
-This repository uses Git and GitHub to maintain source code, assignments, documentation, and project progress.
+Git and GitHub are used to maintain source code, assignments, documentation, and project progress.
 
-**Repository:**
+**GitHub Repository:**
+
 [Veeva Integrated Curriculum](https://github.com/bhanuprakashpindi-creator/Veeva-Integrated-Curriculum)
 
 ### Clone the Repository
@@ -287,13 +395,14 @@ cd Veeva-Integrated-Curriculum
 
 ---
 
-## Final Objective
+# Final Objective
 
 The ultimate objective of this curriculum is to develop the technical knowledge and practical skills required for a **QA Automation Engineering role**.
 
-Through programming exercises, database practice, Agile project management, test case design, defect tracking, and practical assignments, this repository serves as a continuous record of my technical learning and development.
+Through Java programming, database practice, application development, Agile project management, test case design, defect tracking, and practical assignments, this repository serves as a continuous record of my technical learning and development.
 
 ---
 
 **Veeva Integrated Curriculum**
+
 *Learn. Practise. Build. Test. Improve.*
