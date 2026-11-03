@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b695cc8d-ad62-4ede-80b1-684effa5ff04" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/src/main/java/com/ecommerce/HomeMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/src/main/java/com/ecommerce/LoginForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/src/main/java/com/ecommerce/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/src/main/java/com/ecommerce/RegistrationForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/src/main/java/com/ecommerce/config/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/src/main/java/com/ecommerce/dao/CustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/src/main/java/com/ecommerce/dao/ProductDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/src/main/java/com/ecommerce/model/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/src/main/java/com/ecommerce/model/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/src/main/java/com/ecommerce/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/src/main/java/com/ecommerce/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/src/main/java/com/ecommerce/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcommerceProject/src/main/java/com/ecommerce/service/OrderService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/EcommerceProject" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;bhanuprakashpindi-creator&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/bhanuprakashpindi-creator/Veeva-Integrated-Curriculum.git&quot;,
+    &quot;accountId&quot;: &quot;504de85d-6229-4201-b965-f6f7dc0666a9&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="3LaybeBAsTrVfXwdvtuAn5BSOQT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Veeva-Integrated-Cuirculum/Veeva-Integrated-Curriculum/Java-Training/ECommerce OOP Based Project&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-cffe25b9f5b3-intellij.indexing.shared.core-IU-253.28294.334" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b695cc8d-ad62-4ede-80b1-684effa5ff04" name="Changes" comment="" />
+      <created>1793706545949</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793706545949</updated>
+    </task>
+    <servers />
+  </component>
+</project>
