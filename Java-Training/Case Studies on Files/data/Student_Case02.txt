@@ -1,0 +1,1 @@
+Student Name :- BhanuPrakash, RollNo :- 23A81A4351, Age :- 21, Telugu Marks :- 86, Hindi Marks :- 85, English Marks :- 84, Math Marks :- 86, Science Marks :- 89, Total Marks :- 430, Grade :- B

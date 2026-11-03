@@ -1,0 +1,4 @@
+Question :-
+            Create A Sample Java Application To Verify a particular file exists in a system or not . if exists
+            verify it is a directory file or data file . and also verfiy wheather file is readOnly or writeOnly
+            or Both . Print FileName , Path and Its Absolute Path.
