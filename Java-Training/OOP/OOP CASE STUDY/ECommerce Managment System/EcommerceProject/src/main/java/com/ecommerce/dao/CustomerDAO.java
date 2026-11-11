@@ -12,9 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerDAO {
-
-
-
     public boolean addCustomer(Customer customer)
     {
         String sql = "Insert into customers (name , email , phone , address , city , password) values (?,?,?,?,?,?)";
