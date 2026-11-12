@@ -2,9 +2,11 @@
 
 ## 1. Introduction
 
-This document defines the scope of the ShopEasy QA project. It identifies the application functionalities covered by testing, the testing objectives, the testing approach, and the activities included in the project.
+This document defines the scope of the ShopEasy QA project. It identifies the application functionalities covered by testing, the testing objectives, the testing approach, and the activities planned for the project.
 
 The project focuses on functional testing of an online shopping application using Jira and Xray.
+
+The project is currently in progress, with requirements, User Stories, and initial test management components created in Jira.
 
 ## 2. Project Objectives
 
@@ -19,6 +21,7 @@ The primary objectives are:
 - Maintain traceability between requirements, stories, tests, and bugs.
 - Monitor testing progress through Jira dashboards.
 - Prepare a final Test Summary Report.
+- Maintain project documentation and supporting records in GitHub.
 
 ## 3. Application Scope
 
@@ -28,42 +31,48 @@ The application is divided into three major functional modules.
 
 The following functionalities are included:
 
-| Feature           | Description                                                     |
-| ----------------- | --------------------------------------------------------------- |
-| User Registration | Create a new account using personal details.                    |
-| User Login        | Authenticate users using email and password.                    |
-| Account Lock      | Temporarily lock accounts after repeated failed login attempts. |
-| Forgot Password   | Recover accounts using email-based password reset.              |
-| Logout            | Terminate authenticated user sessions securely.                 |
+| Feature | Description |
+|---|---|
+| User Registration | Create a new account using personal details. |
+| User Login | Authenticate users using email and password. |
+| Account Lock | Temporarily lock accounts after repeated failed login attempts. |
+| Forgot Password | Recover accounts using email-based password reset. |
+| Logout | Terminate authenticated user sessions securely. |
+
+**Current progress:** All five User Stories under Account and Login are marked Done in Jira.
 
 ### 3.2 Browse and Search
 
 The following functionalities are included:
 
-| Feature         | Description                                            |
-| --------------- | ------------------------------------------------------ |
-| Product List    | Display products with pagination.                      |
-| Product Search  | Search products using keywords.                        |
-| Product Filters | Filter products by category and price.                 |
-| Product Sorting | Sort products by price and name.                       |
+| Feature | Description |
+|---|---|
+| Product List | Display products with pagination. |
+| Product Search | Search products using keywords. |
+| Product Filters | Filter products by category and price. |
+| Product Sorting | Sort products by price and name. |
 | Product Details | Display detailed product information and availability. |
+
+**Current progress:** All five User Stories under Browse and Search are marked In Progress in Jira.
 
 ### 3.3 Cart and Checkout
 
 The following functionalities are included:
 
-| Feature                  | Description                                             |
-| ------------------------ | ------------------------------------------------------- |
-| Add to Cart              | Add available products to the shopping cart.            |
-| Quantity Management      | Update product quantities.                              |
-| Remove Item              | Remove selected products from the cart.                 |
-| Coupon                   | Apply eligible discount coupons.                        |
-| Checkout                 | Submit shipping details and proceed with checkout.      |
+| Feature | Description |
+|---|---|
+| Add to Cart | Add available products to the shopping cart. |
+| Quantity Management | Update product quantities. |
+| Remove Item | Remove selected products from the cart. |
+| Coupon | Apply eligible discount coupons. |
+| Checkout | Submit shipping details and proceed with checkout. |
 | Payment and Confirmation | Select a payment method and receive order confirmation. |
+
+**Current progress:** All six User Stories under Cart and Checkout are marked To Do in Jira.
 
 ## 4. Testing Scope
 
-The following testing activities are included:
+The project includes the following testing activities:
 
 ### Functional Testing
 
@@ -99,17 +108,19 @@ Identify, document, track, and retest defects discovered during test execution.
 
 Verify that previously working functionalities continue to behave correctly after defect fixes or changes.
 
+**Progress note:** These activities describe the planned testing scope. The existence of test cases does not establish that all these testing activities have been executed.
+
 ## 5. Test Environment
 
-| Configuration      | Details                |
-| ------------------ | ---------------------- |
-| Application        | ShopEasy               |
-| Build Version      | 1.0.3                  |
-| Environment        | Staging                |
-| Browser            | Google Chrome – Latest |
-| Operating System   | Windows 11             |
-| Testing Tool       | Xray                   |
-| Project Management | Jira                   |
+| Configuration | Details |
+|---|---|
+| Application | ShopEasy |
+| Build Version | 1.0.3 |
+| Environment | Staging |
+| Browser | Google Chrome – Latest |
+| Operating System | Windows 11 |
+| Testing Tool | Xray |
+| Project Management | Jira |
 
 ## 6. Test Management Scope
 
@@ -126,6 +137,19 @@ The following activities are included:
 7. Recording Pass, Fail, Blocked, and other applicable execution statuses.
 8. Linking defects to failed tests and related User Stories.
 
+### Current Test Management Progress
+
+According to the latest Jira export:
+
+| Component | Created | Current Status |
+|---|---:|---|
+| Xray Test Cases | 23 | All To Do |
+| Test Sets | 3 | All To Do |
+| Test Plans | 1 | To Do |
+| Test Executions | 1 | To Do |
+
+Test execution and result recording remain pending according to the exported issue statuses.
+
 ## 7. Defect Management Scope
 
 Defect management includes:
@@ -139,6 +163,23 @@ Defect management includes:
 - Linking defects to related test cases and stories.
 - Defect status tracking.
 - Retesting and closure.
+
+### Current Defect Management Progress
+
+The latest Jira export contains one Bug issue.
+
+| Activity | Count |
+|---|---:|
+| Bugs Created | 1 |
+| Bugs Assigned | 0 |
+| Bugs In Progress | 0 |
+| Bugs Resolved | 0 |
+| Bugs Closed | 0 |
+| Bugs Pending | 1 |
+
+The existing Bug issue is currently in the To Do status.
+
+The remaining defect management activities are part of the planned project scope.
 
 ## 8. Out of Scope
 
@@ -158,22 +199,22 @@ These activities may be considered in future testing phases.
 
 ## 9. Deliverables
 
-The expected project deliverables include:
+The project deliverables and their current progress are listed below.
 
-| Deliverable            | Description                                   |
-| ---------------------- | --------------------------------------------- |
-| Jira Project           | Configured ShopEasy QA project.               |
-| Epics and User Stories | Functional requirements organized in Jira.    |
-| Sprint Plans           | Two Scrum sprint plans.                       |
-| Xray Test Cases        | Functional test scenarios.                    |
-| Test Sets              | Organized collections of test cases.          |
-| Test Plan              | Defined testing scope and coverage.           |
-| Test Execution         | Recorded test execution results.              |
-| Bug Reports            | Documented application defects.               |
-| JQL Filters            | Saved Jira queries.                           |
-| QA Dashboard           | Centralized testing and defect monitoring.    |
-| Test Summary Report    | Final testing results and recommendations.    |
-| GitHub Documentation   | Supporting project documentation and exports. |
+| Deliverable | Description | Current Status |
+|---|---|---|
+| Jira Project | Configured ShopEasy QA project. | Created |
+| Epics and User Stories | Functional requirements organized in Jira. | Created |
+| Sprint Plans | Scrum sprint planning and work organization. | Created / In Progress |
+| Xray Test Cases | Functional test scenarios. | 23 Created |
+| Test Sets | Organized collections of test cases. | 3 Created |
+| Test Plan | Defined testing scope and coverage. | Created |
+| Test Execution | Records test execution results. | Created, execution pending |
+| Bug Reports | Documented application defects. | 1 Created |
+| JQL Filters | Saved Jira queries. | To be verified |
+| QA Dashboard | Centralized testing and defect monitoring. | To be verified |
+| Test Summary Report | Final testing results and recommendations. | Documentation prepared; final results pending |
+| GitHub Documentation | Supporting project documentation and exports. | In Progress |
 
 ## 10. Project Completion Criteria
 
@@ -184,14 +225,19 @@ The project will be considered complete when:
 - Planned test executions have been completed and results recorded.
 - Identified defects have been documented and tracked.
 - Required JQL filters and dashboard gadgets have been configured.
-- The final Test Summary Report has been prepared.
+- The final Test Summary Report has been prepared using actual execution results.
 - Project documentation has been organized in GitHub.
+- Supporting screenshots and project exports have been included where applicable.
 
 ## 11. Conclusion
 
 The ShopEasy QA project covers the functional testing and test management activities of an online shopping application.
 
-A clearly defined scope helps maintain testing focus, establish deliverables, and ensure that the project activities are aligned with the specified requirements.
+A clearly defined scope helps maintain testing focus, establish deliverables, and ensure that project activities are aligned with the specified requirements.
+
+The Jira project currently contains three Epics, 16 User Stories, 23 Xray Test issues, three Test Sets, one Test Plan, one Test Execution, one Task, and one Bug.
+
+The project has established its initial requirements and test management structure. Further test execution, defect tracking, reporting, and documentation activities remain part of the project work.
 
 ---
 
