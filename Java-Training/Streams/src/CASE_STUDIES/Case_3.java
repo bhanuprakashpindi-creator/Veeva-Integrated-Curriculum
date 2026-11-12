@@ -6,9 +6,10 @@ package CASE_STUDIES;
 //now,
 //	. find the top earning employees in each department . department wise
 
+import javax.swing.plaf.TableHeaderUI;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 
@@ -16,7 +17,32 @@ public  class Case_3 {
     public static void main(String[] args) {
         List<Employee3> employee3List=fetchData();
         System.out.println("the top earning employees in each department . department wise");
-        employee3List.stream().collect(Collectors.groupingBy(Employee3::getDepartment)).entrySet().stream().filter(n->)
+      Map<String,List<Employee3>> groupedEmployee=employee3List
+              .stream()
+              .collect(Collectors.groupingBy(Employee3::getDepartment));
+
+      groupedEmployee.entrySet()
+              .stream()
+              .forEach(entry->{
+          Employee3 toEmployee=entry
+                                .getValue().stream()
+                                .max(Comparator.comparingDouble(Employee3::getSalary)).orElse(null);
+                                 System.out.println(entry.getKey()+"->"+toEmployee);
+              }
+      );
+      //Second Highest Salary in each department
+        Map<String,List<Employee3>> emplist=employee3List
+                .stream()
+                .collect(Collectors.groupingBy(Employee3::getDepartment));
+        emplist.entrySet().stream()
+                .forEach(stringListEntry ->
+        {
+            Employee3 secHigh= (Employee3) stringListEntry.getValue()
+                                                            .stream()
+                                                            .sorted(Comparator.comparingDouble(Employee3::getSalary).reversed()).skip(1)
+                                                            .findFirst().orElse(null);
+                                                            System.out.println(stringListEntry.getKey()+"->"+secHigh);
+        });
     }
     public static ArrayList<Employee3> fetchData()
     {
