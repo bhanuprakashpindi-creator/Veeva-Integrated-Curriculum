@@ -1,269 +1,212 @@
-# ShopEasy QA – Jira Test Management Project
+# ShopEasy QA – Project Export and Evidence Information
 
-![Jira](https://img.shields.io/badge/Project-Jira%20QA-blue)
-![Testing](https://img.shields.io/badge/Testing-Manual%20Testing-green)
-![Test Management](https://img.shields.io/badge/Test%20Management-Xray-purple)
-![Status](https://img.shields.io/badge/Status-In%20Progress-orange)
+## 1. Introduction
 
-## Project Overview
+This document describes the export files, project backup information, and supporting evidence maintained for the ShopEasy QA project.
 
-**ShopEasy QA** is a Jira-based software testing and test management project designed around an online shopping application.
+Jira exports and supporting documents help preserve project information and provide evidence of the activities performed during project planning, test management, and defect tracking.
 
-The project demonstrates how software testing activities can be planned, organized, executed, and tracked using **Jira Scrum** and the **Xray Test Management** application.
+This document also describes the export structure, evidence requirements, validation checklist, and repository submission structure.
 
-It covers requirement analysis, user story management, sprint planning, test case design, test planning, test execution, defect tracking, JQL filtering, and QA reporting.
+## 2. Project Export Details
 
-The project follows a structured testing workflow that connects requirements to test cases, executions, and defects.
+| Field | Details |
+|---|---|
+| Project Name | ShopEasy QA |
+| Jira Project Key | SEQ |
+| Export Format | CSV |
+| Export File | shopeasy-jira-complete-export.csv |
+| Export Location | 10-Project-Exports |
+| Source Application | Jira |
+| Test Management | Xray |
+| Documentation Status | Completed |
 
----
+## 3. Jira CSV Export
 
-## Project Information
+The Jira CSV export contains issue information from the ShopEasy QA project.
 
-| Attribute               | Details                              |
-| ----------------------- | ------------------------------------ |
-| Project Name            | ShopEasy QA                          |
-| Project Key             | SEQ                                  |
-| Project Type            | Scrum                                |
-| Application             | ShopEasy Online Shopping Application |
-| Testing Approach        | Manual Testing                       |
-| Project Management Tool | Jira                                 |
-| Test Management Tool    | Xray                                 |
-| Test Environment        | Staging                              |
-| Application Build       | 1.0.3                                |
-| Browser                 | Google Chrome – Latest               |
-| Operating System        | Windows 11                           |
+The export includes information such as:
 
----
+- Jira Issue Key.
+- Issue Type.
+- Summary.
+- Description.
+- Status.
+- Priority.
+- Assignee.
+- Reporter.
+- Epic information.
+- Sprint information.
+- Labels.
+- Issue relationships.
 
-## Project Objectives
+### 3.1 Export Issue Summary
 
-- Understand Jira project configuration and Scrum project management.
-- Organize application requirements using Epics and User Stories.
-- Plan and manage work using Scrum sprints.
-- Design functional test cases using Xray.
-- Organize test cases into Test Sets and Test Plans.
-- Execute test cases and record testing results.
-- Identify, report, and track software defects.
-- Create and use JQL filters for issue tracking.
-- Configure a QA dashboard to monitor project progress.
-- Prepare a final Test Summary Report.
+The available Jira project export contains 49 issues.
 
----
+| Issue Type | Number of Issues |
+|---|---:|
+| Epic | 3 |
+| User Story | 16 |
+| Test | 23 |
+| Test Set | 3 |
+| Test Plan | 1 |
+| Test Execution | 1 |
+| Task | 1 |
+| Bug | 1 |
+| **Total** | **49** |
 
-## Application Modules
+### 3.2 Jira Issue Status Summary
 
-The ShopEasy application is divided into three major functional modules.
+| Issue Type | Status | Count |
+|---|---|---:|
+| Epic | To Do | 3 |
+| User Story | Done | 5 |
+| User Story | In Progress | 5 |
+| User Story | To Do | 6 |
+| Test | To Do | 23 |
+| Test Set | To Do | 3 |
+| Test Plan | To Do | 1 |
+| Test Execution | To Do | 1 |
+| Task | To Do | 1 |
+| Bug | To Do | 1 |
 
-### 1. Account and Login
+These figures represent the statuses recorded in the available Jira export.
 
-Features covered:
-
-- User Registration
-- User Login
-- Account Lock
-- Forgot Password
-- Logout
-
-### 2. Browse and Search
-
-Features covered:
-
-- Product Listing
-- Product Search
-- Product Filters
-- Product Sorting
-- Product Details
-
-### 3. Cart and Checkout
-
-Features covered:
-
-- Add to Cart
-- Update Product Quantity
-- Remove Cart Item
-- Apply Coupon
-- Checkout
-- Payment and Order Confirmation
-
----
-
-## Jira Project Structure
-
-The project uses a hierarchical structure to organize development and testing activities.
+### 3.3 Export File Location
 
 ```text
-ShopEasy QA (SEQ)
-│
-├── Epic 1: Account and Login
-│   ├── SEQ-2  User Registration
-│   ├── SEQ-3  User Login
-│   ├── SEQ-4  Account Lock
-│   ├── SEQ-5  Forgot Password
-│   └── SEQ-6  Logout
-│
-├── Epic 2: Browse and Search
-│   ├── SEQ-8  Products List
-│   ├── SEQ-9  Search
-│   ├── SEQ-10 Filters
-│   ├── SEQ-11 Sorting
-│   └── SEQ-12 Product Details
-│
-└── Epic 3: Cart and Checkout
-    ├── SEQ-14 Add To Cart
-    ├── SEQ-15 Quantity
-    ├── SEQ-16 Remove Item
-    ├── SEQ-17 Coupon
-    ├── SEQ-18 Checkout
-    └── SEQ-19 Payment and Confirmation
+10-Project-Exports/
+└── shopeasy-jira-complete-export.csv
 ```
 
-**Project scope:** 3 Epics and 16 User Stories.
+### Important Note
 
----
+A Jira CSV export is not a complete backup of the project.
 
-## Sprint Planning
+Some Xray information, including detailed test steps, test execution results, attachments, and certain relationships, may not be fully represented in the CSV.
 
-The project is organized into two Scrum sprints.
+Additional evidence is maintained separately.
 
-| Sprint   | Name                           | Scope                                                               |
-| -------- | ------------------------------ | ------------------------------------------------------------------- |
-| Sprint 1 | Account and Login              | Registration, login, account security, password recovery and logout |
-| Sprint 2 | Product Discovery and Shopping | Product browsing, search, filters, sorting, cart and checkout       |
+## 4. Supporting Project Documentation
 
-Each sprint is planned to cover its assigned stories and corresponding testing activities.
+The following documents are maintained in the ShopEasy QA repository.
 
----
+| Folder | Documentation | Status |
+|---|---|---|
+| 01-Project-Overview | Project configuration, scope, Jira structure | Completed |
+| 02-Requirements-and-User-Stories | Requirements register and user stories | Completed |
+| 03-Sprint-Planning | Sprint overview and sprint details | Completed |
+| 04-Test-Cases | Test cases for all application modules | Completed |
+| 05-Test-Management | Test Sets, Test Plan, Test Execution | Completed |
+| 06-Bug-Management | Bug reports and bug lifecycle | Completed |
+| 07-JQL-Filters | Saved JQL queries | Completed |
+| 08-Dashboard | Dashboard configuration | Completed |
+| 09-Test-Summary-Report | Final test summary report | Completed |
+| 10-Project-Exports | Jira exports and export information | Completed |
 
-## Test Management with Xray
+## 5. Screenshots and Evidence
 
-Xray is used to organize and manage testing activities within Jira.
+The ShopEasy QA project documentation and project deliverables have been organized for final submission.
 
-The project includes the following test management components:
+Screenshots will be added to provide visual evidence of the Jira and Xray configurations.
 
-| Component      | Identifier     | Purpose                          |
-| -------------- | -------------- | -------------------------------- |
-| Test Cases     | TC-01 onwards  | Define individual test scenarios |
-| Test Sets      | TS-01 onwards  | Group related test cases         |
-| Test Plan      | TP-01          | Organize testing scope           |
-| Test Execution | TE-01          | Record test execution results    |
-| Bug Reports    | BUG-01 onwards | Track identified defects         |
+### 5.1 Evidence Checklist
 
-### Test Case Categories
+| No. | Evidence | Suggested Filename | Status |
+|---|---|---|---|
+| 1 | Jira Project Overview | jira-project-overview.png | Completed – Screenshot to be added |
+| 2 | Epic and Story Hierarchy | jira-epics-stories.png | Completed – Screenshot to be added |
+| 3 | Sprint 1 Board | sprint-1-board.png | Completed – Screenshot to be added |
+| 4 | Sprint 2 Board | sprint-2-board.png | Completed – Screenshot to be added |
+| 5 | Xray Test Cases | xray-test-cases.png | Completed – Screenshot to be added |
+| 6 | Xray Test Sets | xray-test-sets.png | Completed – Screenshot to be added |
+| 7 | Xray Test Plan | xray-test-plan.png | Completed – Screenshot to be added |
+| 8 | Xray Test Execution | xray-test-execution.png | Completed – Screenshot to be added |
+| 9 | Jira Bug Reports | jira-bug-reports.png | Completed – Screenshot to be added |
+| 10 | Jira Bug Workflow | jira-bug-workflow.png | Completed – Screenshot to be added |
+| 11 | Saved JQL Filters | jira-saved-filters.png | Completed – Screenshot to be added |
+| 12 | QA Dashboard | shopeasy-qa-dashboard.png | Completed – Screenshot to be added |
 
-Test cases are designed to cover three categories:
+### 5.2 Evidence Storage Locations
 
-- **Positive Testing:** Verify expected behavior using valid inputs.
-- **Negative Testing:** Verify application behavior using invalid inputs.
-- **Edge and Boundary Testing:** Verify behavior at minimum, maximum, and boundary conditions.
-
-Test cases are linked to their corresponding Jira User Stories to maintain requirement traceability.
-
----
-
-## Test Environment
-
-| Configuration    | Details                |
-| ---------------- | ---------------------- |
-| Environment      | Staging                |
-| Build Version    | 1.0.3                  |
-| Browser          | Google Chrome – Latest |
-| Operating System | Windows 11             |
-| Application      | ShopEasy               |
-| Testing Type     | Functional Testing     |
-
----
-
-## Defect Management
-
-Defects identified during testing are recorded as Jira Bug issues.
-
-Each bug report is intended to contain:
-
-- Bug ID and summary
-- Environment details
-- Preconditions
-- Steps to reproduce
-- Expected result
-- Actual result
-- Severity and priority
-- Screenshot or supporting evidence
-- Related Test Case and User Story
-
-### Bug Lifecycle
+Screenshots should be stored in the appropriate folders.
 
 ```text
-Open
-  |
-  v
-In Progress
-  |
-  v
-Fixed
-  |
-  v
-Retest
-  |
-  v
-Closed
+ShopEasy-QA/
+│
+├── 06-Bug-Management/
+│   └── Screenshots/
+│
+└── 08-Dashboard/
+    └── Screenshots/
 ```
 
-If a defect fails retesting, it is returned to **In Progress** for further investigation and correction.
+Other project evidence can be organized under the relevant documentation folders if required.
 
----
+### 5.3 Suggested Screenshot Names
 
-## JQL and Saved Filters
+```text
+jira-project-overview.png
+jira-epics-stories.png
+sprint-1-board.png
+sprint-2-board.png
+xray-test-cases.png
+xray-test-sets.png
+xray-test-plan.png
+xray-test-execution.png
+jira-bug-reports.png
+jira-bug-workflow.png
+jira-saved-filters.png
+shopeasy-qa-dashboard.png
+```
 
-Jira Query Language (JQL) is used to search, filter, and monitor project issues.
+Screenshots should show the actual Jira or Xray interface and should be readable enough to demonstrate the relevant project configuration.
 
-The project includes filters for:
+## 6. Export Validation Checklist
 
-- Open bugs
-- High-priority defects
-- Bugs grouped by assignee
-- Failed test cases
-- Sprint-specific user stories
+The following documentation and repository preparation activities are marked complete.
 
-These filters support defect tracking, sprint monitoring, and test management.
+- [x] Jira CSV export prepared.
+- [x] Project issue information documented.
+- [x] Jira issue types and project structure documented.
+- [x] Project documentation organized.
+- [x] Test case documentation prepared.
+- [x] Xray Test Sets documented.
+- [x] Xray Test Plan documented.
+- [x] Xray Test Execution documented.
+- [x] Bug management documentation prepared.
+- [x] JQL filter documentation prepared.
+- [x] Dashboard configuration documented.
+- [x] Final test summary report prepared.
+- [x] Repository folder structure organized.
+- [ ] Add Jira project screenshots.
+- [ ] Add Xray test management screenshots.
+- [ ] Add bug tracking screenshots.
+- [ ] Add dashboard screenshots.
+- [ ] Perform final screenshot and repository verification.
+- [ ] Verify that no confidential information is published.
 
----
+**Overall Documentation Status:** Completed.
 
-## QA Dashboard
+**Remaining Activity:** Add screenshots and perform final repository verification.
 
-A Jira dashboard named **ShopEasy QA Dashboard** is planned to provide a centralized view of project quality and progress.
+## 7. Export Limitations
 
-The dashboard includes the following reporting areas:
+The following limitations should be considered:
 
-| Gadget                 | Purpose                              |
-| ---------------------- | ------------------------------------ |
-| Sprint Burndown        | Monitor sprint progress              |
-| Pie Chart              | Visualize bugs by status or priority |
-| Created vs Resolved    | Track defect trends                  |
-| Filter Results         | Display critical open defects        |
-| Test Execution Results | Monitor test execution outcomes      |
+1. CSV exports may not preserve every Jira configuration.
+2. Xray test steps may require separate documentation or export.
+3. Test execution results may need separate evidence.
+4. Attachments and screenshots may not be included in the CSV.
+5. Jira workflows and dashboard configurations may require screenshots or separate documentation.
+6. Importing a CSV into another Jira project does not necessarily restore the original project configuration.
+7. Documentation-only test cases should not be treated as actual Jira Test issues.
+8. Jira issue statuses in the export represent the status at the time the export was generated.
 
-Dashboard screenshots will be maintained in the repository.
+## 8. Repository Submission Structure
 
----
-
-## Test Reporting
-
-A final Test Summary Report will document:
-
-- Testing overview and scope
-- Test environment
-- Total test cases
-- Passed, failed, blocked, and not-run cases
-- Defects by severity and status
-- Test execution metrics
-- Requirement coverage
-- Testing risks
-- Final Go/No-Go recommendation
-
-Execution metrics will be calculated from the recorded test results.
-
----
-
-## Repository Structure
+The final GitHub repository should contain the following structure:
 
 ```text
 ShopEasy-QA/
@@ -286,11 +229,8 @@ ShopEasy-QA/
 │
 ├── 04-Test-Cases/
 │   ├── Account-and-Login/
-│   │   └── Test-Cases.md
 │   ├── Browse-and-Search/
-│   │   └── Test-Cases.md
 │   └── Cart-and-Checkout/
-│       └── Test-Cases.md
 │
 ├── 05-Test-Management/
 │   ├── Test-Sets.md
@@ -317,55 +257,51 @@ ShopEasy-QA/
     └── Export-Information.md
 ```
 
+Only sanitized exports and non-confidential project evidence should be published.
+
+## 9. GitHub Submission Guidelines
+
+Before publishing the project to GitHub:
+
+- Ensure all Markdown documents are properly formatted.
+- Verify that the folder structure matches the repository documentation.
+- Include the Jira CSV export if it is safe to publish.
+- Add screenshots to their respective folders.
+- Check that all referenced files exist.
+- Remove unnecessary temporary files.
+- Exclude passwords, access tokens, and confidential information.
+- Verify that the README provides a clear introduction to the project.
+- Check that all documentation is consistent with the available Jira records.
+
+The repository should provide a clear overview of the ShopEasy QA project and its documentation.
+
+## 10. Project Completion Summary
+
+The ShopEasy QA documentation package has been organized into ten major sections.
+
+| No. | Project Area | Documentation Status |
+|---|---|---|
+| 1 | Project Overview | Completed |
+| 2 | Requirements and User Stories | Completed |
+| 3 | Sprint Planning | Completed |
+| 4 | Test Cases | Completed |
+| 5 | Test Management | Completed |
+| 6 | Bug Management | Completed |
+| 7 | JQL Filters | Completed |
+| 8 | Dashboard Configuration | Completed |
+| 9 | Final Test Summary Report | Completed |
+| 10 | Project Exports and Evidence Information | Completed |
+
+The remaining submission activity is to add the actual screenshots and verify the final GitHub repository.
+
+## 11. Conclusion
+
+The project export and evidence structure provides a centralized location for maintaining Jira exports, testing documentation, and supporting screenshots.
+
+The Jira CSV export preserves issue information for the ShopEasy QA project, while the Markdown documents describe the project structure, requirements, test management, defect management, and reporting activities.
+
+The ShopEasy QA documentation package is prepared for submission. Adding screenshots and completing the final repository verification will provide the supporting visual evidence for the project.
+
 ---
 
-## Tools and Technologies
-
-| Tool       | Usage                                   |
-| ---------- | --------------------------------------- |
-| Jira       | Project and issue management            |
-| Jira Scrum | Sprint planning and tracking            |
-| Xray       | Test case and test execution management |
-| JQL        | Issue searching and filtering           |
-| Git        | Version control                         |
-| GitHub     | Project documentation and portfolio     |
-
----
-
-## Project Progress
-
-The project is being documented and completed in stages.
-
-| Activity                     | Status      |
-| ---------------------------- | ----------- |
-| Jira Project Configuration   | Completed   |
-| Epic and User Story Creation | Completed   |
-| Requirements Documentation   | Completed   |
-| Sprint Planning              | In Progress |
-| Test Case Creation           | In Progress |
-| Test Sets and Test Plan      | Created     |
-| Test Execution               | In Progress |
-| Bug Management               | In Progress |
-| JQL Filters                  | Pending     |
-| Dashboard Configuration      | Pending     |
-| Final Test Summary Report    | Pending     |
-
-_Progress statuses should be updated as the corresponding Jira activities are completed._
-
----
-
-## Author
-
-**Bhanuprakash Pindi**
-
-GitHub: [bhanuprakashpindi-creator](https://github.com/bhanuprakashpindi-creator)
-
----
-
-## Conclusion
-
-The ShopEasy QA project demonstrates a structured approach to managing software testing activities using Jira and Xray.
-
-It brings together requirement management, Agile sprint planning, test design, test execution, defect tracking, and QA reporting in a single project.
-
-The repository serves as a practical demonstration of Jira-based QA and test management skills.
+**End of Document**
