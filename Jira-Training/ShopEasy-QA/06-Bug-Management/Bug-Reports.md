@@ -8,7 +8,9 @@ In the ShopEasy QA project, Jira is used to record, prioritize, track, and manag
 
 Each Bug issue contains information about the unexpected behavior, reproduction steps, expected results, actual results, severity, and priority.
 
-Bugs are also linked to their corresponding Xray Test Cases and Jira User Stories to maintain traceability.
+Bugs are linked to their corresponding Xray Test Cases and Jira User Stories wherever applicable to maintain traceability.
+
+This document describes the bug reporting process, defect classification, reporting format, and existing defect record in the ShopEasy project.
 
 ## 2. Bug Reporting Objectives
 
@@ -20,52 +22,53 @@ The objectives of bug reporting are:
 - Compare expected and actual results.
 - Assign appropriate severity and priority.
 - Attach screenshots as supporting evidence.
-- Link defects to failed test cases.
-- Track defects until successful resolution.
+- Link defects to related test cases.
+- Track defects through their lifecycle.
+- Support retesting and defect closure.
 
 ## 3. Bug Report Information
 
 Each bug report should contain the following information:
 
-| Field              | Description                                       |
-| ------------------ | ------------------------------------------------- |
-| Bug ID             | Logical identifier such as BUG-01.                |
-| Jira Issue Key     | Official Jira Bug issue key.                      |
-| Summary            | Short description of the defect.                  |
-| Description        | Detailed explanation of the issue.                |
-| Environment        | Application environment where the issue occurred. |
-| Preconditions      | Conditions required to reproduce the issue.       |
-| Steps to Reproduce | Numbered steps to reproduce the defect.           |
-| Expected Result    | Behavior specified by the requirement.            |
-| Actual Result      | Behavior observed during testing.                 |
-| Severity           | Impact of the defect on the application.          |
-| Priority           | Urgency of fixing the defect.                     |
-| Attachment         | Screenshot or other supporting evidence.          |
-| Related Test       | Xray Test Case associated with the defect.        |
-| Related Story      | Jira User Story associated with the defect.       |
-| Status             | Current state of the defect.                      |
+| Field | Description |
+|---|---|
+| Bug ID | Logical identifier such as BUG-01. |
+| Jira Issue Key | Official Jira Bug issue key. |
+| Summary | Short description of the defect. |
+| Description | Detailed explanation of the issue. |
+| Environment | Application environment where the issue occurred. |
+| Preconditions | Conditions required to reproduce the issue. |
+| Steps to Reproduce | Numbered steps to reproduce the defect. |
+| Expected Result | Behavior specified by the requirement. |
+| Actual Result | Behavior observed during testing. |
+| Severity | Impact of the defect on the application. |
+| Priority | Urgency of fixing the defect. |
+| Attachment | Screenshot or other supporting evidence. |
+| Related Test | Xray Test Case associated with the defect. |
+| Related Story | Jira User Story associated with the defect. |
+| Status | Current state of the defect. |
 
 ## 4. Bug Severity Classification
 
 Severity represents the impact of a defect on application functionality.
 
-| Severity | Description                                                                             |
-| -------- | --------------------------------------------------------------------------------------- |
+| Severity | Description |
+|---|---|
 | Critical | Defect causes a major system failure or makes a critical application function unusable. |
-| Major    | Defect significantly affects important application functionality.                       |
-| Minor    | Defect affects a limited functionality but does not prevent normal application usage.   |
-| Trivial  | Minor cosmetic or user interface issue with minimal functional impact.                  |
+| Major | Defect significantly affects important application functionality. |
+| Minor | Defect affects limited functionality but does not prevent normal application usage. |
+| Trivial | Minor cosmetic or user interface issue with minimal functional impact. |
 
 ## 5. Bug Priority Classification
 
 Priority indicates how urgently a defect should be addressed.
 
-| Priority | Description                                                |
-| -------- | ---------------------------------------------------------- |
-| Highest  | Requires immediate attention.                              |
-| High     | Should be fixed as soon as possible.                       |
-| Medium   | Should be addressed during normal development activities.  |
-| Low      | Can be addressed when higher-priority issues are resolved. |
+| Priority | Description |
+|---|---|
+| Highest | Requires immediate attention. |
+| High | Should be fixed as soon as possible. |
+| Medium | Should be addressed during normal development activities. |
+| Low | Can be addressed when higher-priority issues are resolved. |
 
 ## 6. Bug Reporting Template
 
@@ -73,15 +76,15 @@ The following format is used when creating a Bug issue in Jira.
 
 ### Bug Identification
 
-| Field            | Value                  |
-| ---------------- | ---------------------- |
-| Bug ID           | BUG-XX                 |
-| Jira Issue Key   | SEQ-XX                 |
-| Summary          | Enter defect summary   |
-| Environment      | Staging                |
-| Build            | 1.0.3                  |
-| Browser          | Google Chrome – Latest |
-| Operating System | Windows 11             |
+| Field | Value |
+|---|---|
+| Bug ID | BUG-XX |
+| Jira Issue Key | SEQ-XX |
+| Summary | Enter defect summary |
+| Environment | Staging |
+| Build | 1.0.3 |
+| Browser | Google Chrome – Latest |
+| Operating System | Windows 11 |
 
 ### Preconditions
 
@@ -106,11 +109,11 @@ Describe the actual behavior observed during testing.
 
 ### Defect Classification
 
-| Field    | Value                              |
-| -------- | ---------------------------------- |
+| Field | Value |
+|---|---|
 | Severity | Critical / Major / Minor / Trivial |
-| Priority | Highest / High / Medium / Low      |
-| Status   | Open                               |
+| Priority | Highest / High / Medium / Low |
+| Status | Open |
 
 ### Supporting Evidence
 
@@ -120,21 +123,37 @@ Attach screenshots or other relevant evidence demonstrating the defect.
 
 Link the Bug to:
 
-- The failed Xray Test Case.
-- The affected Jira User Story.
+- The related Xray Test Case.
+- The affected Jira User Story, where applicable.
 - The relevant Requirement ID in the documentation.
 
 ## 7. Existing Bug Records
 
 The Jira project export contains one Bug issue.
 
-| Logical ID | Jira Issue Key | Description              |
-| ---------- | -------------- | ------------------------ |
-| BUG-01     | Verify in Jira | Existing Jira Bug record |
+| Logical ID | Jira Issue Key | Related Test | Current Status | Assignee | Resolution |
+|---|---|---|---|---|---|
+| BUG-01 | SEQ-43 | SEQ-27 (TC-08) | To Do | Unassigned | Not recorded |
 
-The actual defect details, severity, priority, and linked test case should be taken from the Jira issue.
+### Existing Bug Record Details
 
-Additional bug records should be documented here as they are created.
+**Logical ID:** BUG-01
+
+**Jira Issue Key:** SEQ-43
+
+**Related Test Case:** TC-08 – Invalid credentials
+
+**Related Jira Test Issue:** SEQ-27
+
+**Current Status:** To Do
+
+**Assignee:** No assignee recorded in the export.
+
+**Resolution:** No resolution recorded in the export.
+
+The Jira export confirms the existence of this Bug issue and its relationship with the invalid credentials test. The detailed defect description, reproduction steps, severity, priority, and supporting evidence should be verified directly from the Jira issue.
+
+**Note:** The Jira issue key and status above are based on the available project export. No additional defect details or resolution results are assumed.
 
 ## 8. Bug-to-Test Traceability
 
@@ -144,7 +163,23 @@ The relationship is:
 
 **Requirement → User Story → Xray Test → Failed Execution → Bug**
 
-This relationship helps identify the affected requirement and provides a clear record of how the defect was discovered.
+For the existing ShopEasy Bug record, the available Jira relationship is:
+
+```text
+TC-08 – Invalid Credentials
+        |
+        | Jira Test Issue: SEQ-27
+        |
+        v
+BUG-01 – Existing Defect
+        |
+        | Jira Bug Issue: SEQ-43
+        |
+        v
+Defect Investigation and Resolution
+```
+
+This relationship helps identify the affected requirement and provides a record of how the defect is associated with testing activities.
 
 ## 9. Bug Retesting
 
@@ -160,24 +195,31 @@ The retesting process includes:
 6. Close the defect if retesting is successful.
 7. Return the defect to In Progress if the issue still exists.
 
+Retesting results should be recorded in the corresponding Jira and Xray issues.
+
 ## 10. Bug Reporting Best Practices
 
 - Use clear and descriptive summaries.
 - Provide reproducible steps.
 - Include relevant test data.
-- Quote the corresponding requirement in the expected result.
+- Specify the corresponding requirement.
 - Avoid ambiguous descriptions.
 - Assign severity based on functional impact.
 - Assign priority based on urgency.
 - Attach clear screenshots.
 - Link bugs to related tests and stories.
 - Update defect status after every retesting activity.
+- Record the final resolution accurately.
 
 ## 11. Conclusion
 
 Bug reporting provides a structured method for documenting unexpected application behavior.
 
-Jira Bug issues, combined with Xray test management, help maintain defect traceability and support systematic defect investigation, retesting, and closure.
+In the ShopEasy QA project, Jira Bug issues and Xray test management support defect tracking and test traceability.
+
+The project export contains one Bug issue, SEQ-43, associated with the invalid credentials test issue SEQ-27.
+
+Maintaining clear bug reports, appropriate severity and priority classifications, and traceability between requirements, tests, and defects supports systematic defect investigation, retesting, and closure.
 
 ---
 
