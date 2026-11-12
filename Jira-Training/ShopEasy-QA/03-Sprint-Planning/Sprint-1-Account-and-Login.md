@@ -2,38 +2,40 @@
 
 ## 1. Sprint Information
 
-| Attribute        | Details                                                         |
-| ---------------- | --------------------------------------------------------------- |
-| Project          | ShopEasy QA                                                     |
-| Project Key      | SEQ                                                             |
-| Sprint Name      | Account and Login                                               |
-| Sprint Number    | Sprint 1                                                        |
-| Duration         | 1 Week                                                          |
-| Methodology      | Scrum                                                           |
-| Jira Board       | ShopEasy QA Scrum Board                                         |
+| Attribute | Details |
+|---|---|
+| Project | ShopEasy QA |
+| Project Key | SEQ |
+| Sprint Name | Account and Login |
+| Sprint Number | Sprint 1 |
+| Duration | 1 Week |
+| Methodology | Scrum |
+| Jira Board | ShopEasy QA Scrum Board |
 | Sprint Objective | Validate account management and authentication functionalities. |
+| Current Status | User Stories Completed |
 
 ## 2. Sprint Objective
 
-The objective of Sprint 1 is to cover the core account management and authentication features of the ShopEasy application.
+The objective of Sprint 1 was to cover the core account management and authentication features of the ShopEasy application.
 
-This Sprint focuses on ensuring that users can register, log in, recover forgotten passwords, and securely manage their sessions.
+This Sprint focused on user registration, login, password recovery, and secure session management.
 
-It also validates account security through temporary account locking after repeated failed login attempts.
+It also included account security through temporary account locking after repeated failed login attempts.
+
+All five User Stories included in this Sprint are currently marked Done in Jira.
 
 ## 3. Sprint Scope
 
 The Sprint contains five User Stories under the **Account and Login** Epic.
 
-| Jira Key | User Story        | Requirement |
-| -------- | ----------------- | ----------- |
-| SEQ-2    | User Registration | REQ-A1      |
-| SEQ-3    | User Login        | REQ-A2      |
-| SEQ-4    | Account Lock      | REQ-A3      |
-| SEQ-5    | Forgot Password   | REQ-A4      |
-| SEQ-6    | Logout            | REQ-A5      |
-
-**Total User Stories:** 5
+| Jira Key | User Story | Requirement | Current Status |
+|---|---|---|---|
+| SEQ-2 | User Registration | REQ-A1 | Done |
+| SEQ-3 | User Login | REQ-A2 | Done |
+| SEQ-4 | Account Lock | REQ-A3 | Done |
+| SEQ-5 | Forgot Password | REQ-A4 | Done |
+| SEQ-6 | Logout | REQ-A5 | Done |
+| **Total** | **5 User Stories** | | **5 Done** |
 
 ## 4. Sprint Backlog
 
@@ -51,6 +53,8 @@ The Sprint contains five User Stories under the **Account and Login** Epic.
 
 **Testing Focus:** Positive, negative, and boundary testing.
 
+**Jira Status:** Done.
+
 ### SEQ-3 – User Login
 
 **Description:** Allow registered users to authenticate using their email address and password.
@@ -65,6 +69,8 @@ The Sprint contains five User Stories under the **Account and Login** Epic.
 
 **Testing Focus:** Positive and negative authentication testing.
 
+**Jira Status:** Done.
+
 ### SEQ-4 – Account Lock
 
 **Description:** Temporarily lock accounts after five consecutive failed login attempts.
@@ -77,6 +83,8 @@ The Sprint contains five User Stories under the **Account and Login** Epic.
 - Validate account access after 15 minutes.
 
 **Testing Focus:** Security and time-bound boundary testing.
+
+**Jira Status:** Done.
 
 ### SEQ-5 – Forgot Password
 
@@ -91,6 +99,8 @@ The Sprint contains five User Stories under the **Account and Login** Epic.
 
 **Testing Focus:** Positive, negative, and time-bound testing.
 
+**Jira Status:** Done.
+
 ### SEQ-6 – Logout
 
 **Description:** Allow authenticated users to terminate their sessions securely.
@@ -103,72 +113,85 @@ The Sprint contains five User Stories under the **Account and Login** Epic.
 
 **Testing Focus:** Session management and security testing.
 
+**Jira Status:** Done.
+
 ## 5. Story Point Estimation
 
-Story points are used to represent the relative complexity of the Sprint backlog items.
+Story points are used to represent the relative complexity of Sprint backlog items.
 
-| Jira Key  | User Story        |          Story Points |
-| --------- | ----------------- | --------------------: |
-| SEQ-2     | User Registration | As configured in Jira |
-| SEQ-3     | User Login        | As configured in Jira |
-| SEQ-4     | Account Lock      | As configured in Jira |
-| SEQ-5     | Forgot Password   | As configured in Jira |
-| SEQ-6     | Logout            | As configured in Jira |
-| **Total** | **5 Stories**     |  **Update from Jira** |
+| Jira Key | User Story | Story Points |
+|---|---|---|
+| SEQ-2 | User Registration | As configured in Jira |
+| SEQ-3 | User Login | As configured in Jira |
+| SEQ-4 | Account Lock | As configured in Jira |
+| SEQ-5 | Forgot Password | As configured in Jira |
+| SEQ-6 | Logout | As configured in Jira |
+| **Total** | **5 Stories** | **Refer to Jira** |
 
-_The actual story point values should be taken from the Jira project rather than estimated retrospectively in this document._
+The actual story point values should be taken from Jira rather than estimated retrospectively.
 
 ## 6. Sprint Testing Activities
 
-Testing activities are managed through Xray.
+Testing activities are organized through Xray.
 
-The following test cases were created for Sprint 1:
+The following test cases have been created for the Account and Login functionality.
 
-| Test Case ID | Jira Test Key | Test Scenario                           |
-| ------------ | ------------- | --------------------------------------- |
-| TC-01        | SEQ-20        | Valid registration                      |
-| TC-02        | SEQ-21        | Invalid email                           |
-| TC-03        | SEQ-22        | Invalid password                        |
-| TC-04        | SEQ-23        | Duplicate email                         |
-| TC-05        | SEQ-24        | Minimum password length                 |
-| TC-07        | SEQ-25        | Valid login                             |
-| TC-08        | SEQ-27        | Invalid credentials                     |
-| TC-09        | SEQ-28        | Unregistered email                      |
-| TC-10        | SEQ-29        | Empty email and password                |
-| TC-11        | SEQ-30        | Account lock after five failed attempts |
-| TC-12        | SEQ-31        | Login blocked during lock period        |
-| TC-13        | SEQ-32        | Account unlock after 15 minutes         |
-| TC-14        | SEQ-33        | Reset link sent to registered email     |
-| TC-15        | SEQ-34        | Password reset using unregistered email |
-| TC-16        | SEQ-35        | Reset link expires after 30 minutes     |
-| TC-17        | SEQ-36        | Successful logout                       |
-| TC-18        | SEQ-37        | Browser Back after logout               |
+| Test Case ID | Jira Test Key | Test Scenario | Status |
+|---|---|---|---|
+| TC-01 | SEQ-20 | Valid registration | To Do |
+| TC-02 | SEQ-21 | Invalid email | To Do |
+| TC-03 | SEQ-22 | Invalid password | To Do |
+| TC-04 | SEQ-23 | Duplicate email | To Do |
+| TC-05 | SEQ-24 | Minimum password length | To Do |
+| TC-07 | SEQ-25 | Valid login | To Do |
+| TC-08 | SEQ-27 | Invalid credentials | To Do |
+| TC-09 | SEQ-28 | Unregistered email | To Do |
+| TC-10 | SEQ-29 | Empty email and password | To Do |
+| TC-11 | SEQ-30 | Account lock after five failed attempts | To Do |
+| TC-12 | SEQ-31 | Login blocked during lock period | To Do |
+| TC-13 | SEQ-32 | Account unlock after 15 minutes | To Do |
+| TC-14 | SEQ-33 | Reset link sent to registered email | To Do |
+| TC-15 | SEQ-34 | Password reset using unregistered email | To Do |
+| TC-16 | SEQ-35 | Reset link expires after 30 minutes | To Do |
+| TC-17 | SEQ-36 | Successful logout | To Do |
+| TC-18 | SEQ-37 | Browser Back after logout | To Do |
+
+**Total Test Cases:** 17.
 
 **Note:** TC-06 is intentionally left unused in the test case numbering.
 
+Although the test cases have been created, their current Jira status is To Do. Therefore, test execution and result recording are still pending.
+
 ## 7. Test Management
 
-The following Xray components were created for Sprint 1:
+The following Xray components were created for Sprint 1.
 
-| Component                 | Identifier | Purpose                                                            |
-| ------------------------- | ---------- | ------------------------------------------------------------------ |
-| Registration Test Set     | TS-01      | Groups registration test cases.                                    |
-| Login Test Set            | TS-02      | Groups login test cases.                                           |
-| Account Security Test Set | TS-03      | Groups account security, password recovery, and logout test cases. |
-| Test Plan                 | TP-01      | Organizes Sprint 1 testing scope.                                  |
-| Test Execution            | TE-01      | Records Sprint 1 test execution results.                           |
+| Component | Jira Key | Purpose | Status |
+|---|---|---|---|
+| Registration Test Set | SEQ-38 | Groups registration test cases. | To Do |
+| Login Test Set | SEQ-39 | Groups login test cases. | To Do |
+| Account Security Test Set | SEQ-40 | Groups account security, password recovery, and logout test cases. | To Do |
+| Test Plan | SEQ-41 | Organizes Sprint 1 testing scope. | To Do |
+| Test Execution | SEQ-42 | Records Sprint 1 test execution results. | To Do |
 
 The Test Plan includes the three Test Sets.
 
+**Current progress:**
+
+- Three Test Sets created.
+- One Test Plan created.
+- One Test Execution created.
+- Test execution results are not yet recorded in the exported Jira data.
+
 ## 8. Test Environment
 
-| Configuration    | Value                  |
-| ---------------- | ---------------------- |
-| Application      | ShopEasy               |
-| Build            | 1.0.3                  |
-| Environment      | Staging                |
-| Browser          | Google Chrome – Latest |
-| Operating System | Windows 11             |
+| Configuration | Value |
+|---|---|
+| Application | ShopEasy |
+| Build | 1.0.3 |
+| Environment | Staging |
+| Browser | Google Chrome – Latest |
+| Operating System | Windows 11 |
 
 ## 9. Sprint Execution and Tracking
 
@@ -183,28 +206,40 @@ The following activities are tracked:
 - Test execution results.
 - Identified defects.
 
-The Sprint 1 Test Execution is maintained separately in Xray.
+### Current Sprint Progress
+
+| Activity | Total | Completed / Current Status |
+|---|---:|---|
+| User Stories | 5 | 5 Done |
+| Xray Test Cases | 17 | 17 To Do |
+| Test Sets | 3 | 3 To Do |
+| Test Plan | 1 | To Do |
+| Test Execution | 1 | To Do |
+
+The five User Stories have been completed in Jira. Test execution remains pending according to the current issue statuses.
 
 ## 10. Sprint Deliverables
 
-The expected Sprint 1 deliverables include:
+The following Sprint 1 components have been created:
 
-- Five User Stories.
-- Registration test cases.
-- Login test cases.
-- Account security test cases.
+- Five User Stories under Account and Login.
+- Seventeen Xray Test Cases.
 - Three Xray Test Sets.
 - One Test Plan.
 - One Test Execution.
-- Defect records for identified issues.
+- One Bug issue in the project.
+
+The Bug issue is tracked separately through the Bug Management documentation.
 
 ## 11. Conclusion
 
-Sprint 1 focuses on the ShopEasy application's account management and authentication functionalities.
+Sprint 1 focused on the ShopEasy application's account management and authentication functionalities.
 
-The Sprint establishes the foundation for validating user registration, login security, password recovery, and session management.
+All five User Stories under Account and Login have reached the Done status in Jira.
 
-Jira Scrum is used to organize the Sprint backlog, while Xray manages the associated test cases and execution activities.
+The Sprint also established the initial Xray testing structure, including 17 Test Cases, three Test Sets, one Test Plan, and one Test Execution.
+
+Although the planning and test design components have been created, test execution and result recording remain pending.
 
 ---
 
