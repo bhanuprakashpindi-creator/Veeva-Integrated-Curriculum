@@ -15,64 +15,69 @@ The module covers:
 
 The test cases validate shopping cart operations, discount calculations, shipping information, payment methods, and order confirmation.
 
+Each test case is mapped to its corresponding functional requirement and Jira User Story to maintain requirement traceability.
+
 ## 2. Test Environment
 
-| Configuration        | Details                |
-| -------------------- | ---------------------- |
-| Application          | ShopEasy               |
-| Build                | 1.0.3                  |
-| Environment          | Staging                |
-| Browser              | Google Chrome – Latest |
-| Operating System     | Windows 11             |
-| Test Management Tool | Xray                   |
+| Configuration | Details |
+|---|---|
+| Application | ShopEasy |
+| Build | 1.0.3 |
+| Environment | Staging |
+| Browser | Google Chrome – Latest |
+| Operating System | Windows 11 |
+| Test Management Tool | Xray |
 
 ## 3. Related Jira User Stories
 
-| Jira Key | User Story               | Requirement |
-| -------- | ------------------------ | ----------- |
-| SEQ-14   | Add To Cart              | REQ-C1      |
-| SEQ-15   | Quantity                 | REQ-C2      |
-| SEQ-16   | Remove Item              | REQ-C3      |
-| SEQ-17   | Coupon                   | REQ-C4      |
-| SEQ-18   | Checkout                 | REQ-C5      |
-| SEQ-19   | Payment and Confirmation | REQ-C6      |
+| Jira Key | User Story | Requirement |
+|---|---|---|
+| SEQ-14 | Add To Cart | REQ-C1 |
+| SEQ-15 | Quantity | REQ-C2 |
+| SEQ-16 | Remove Item | REQ-C3 |
+| SEQ-17 | Coupon | REQ-C4 |
+| SEQ-18 | Checkout | REQ-C5 |
+| SEQ-19 | Payment and Confirmation | REQ-C6 |
 
 ## 4. Test Case Summary
 
-The following test cases are planned for this module.
+The following test cases cover the Cart and Checkout module.
 
-| Test Case ID | Scenario                                          | Category | Requirement |
-| ------------ | ------------------------------------------------- | -------- | ----------- |
-| TC-29        | Add available product to cart                     | Positive | REQ-C1      |
-| TC-30        | Cart icon displays total item count               | Positive | REQ-C1      |
-| TC-31        | Update product quantity                           | Positive | REQ-C2      |
-| TC-32        | Validate quantity boundaries                      | Edge     | REQ-C2      |
-| TC-33        | Remove product from cart                          | Positive | REQ-C3      |
-| TC-34        | Display empty cart message                        | Edge     | REQ-C3      |
-| TC-35        | Apply valid SAVE10 coupon                         | Positive | REQ-C4      |
-| TC-36        | Reject coupon below minimum cart value            | Negative | REQ-C4      |
-| TC-37        | Prevent checkout without login                    | Negative | REQ-C5      |
-| TC-38        | Validate mandatory shipping information           | Negative | REQ-C5      |
-| TC-39        | Complete checkout using supported payment methods | Positive | REQ-C6      |
-| TC-40        | Verify order confirmation details                 | Positive | REQ-C6      |
+| Test Case ID | Jira Test Key | Scenario | Category | Requirement |
+|---|---|---|---|---|
+| TC-54 | Documentation ID | Successfully add product to cart | Positive | REQ-C1 |
+| TC-55 | Documentation ID | Prevent adding unavailable product to cart | Negative | REQ-C1 |
+| TC-56 | Documentation ID | Update product quantity | Positive | REQ-C2 |
+| TC-57 | Documentation ID | Prevent quantity above 10 | Boundary | REQ-C2 |
+| TC-58 | Documentation ID | Remove product from cart | Positive | REQ-C3 |
+| TC-59 | Documentation ID | Display empty cart message | Edge | REQ-C3 |
+| TC-60 | Documentation ID | Apply valid SAVE10 coupon | Positive | REQ-C4 |
+| TC-61 | Documentation ID | Reject coupon below minimum cart value | Negative | REQ-C4 |
+| TC-62 | Documentation ID | Complete checkout with valid shipping details | Positive | REQ-C5 |
+| TC-63 | Documentation ID | Reject invalid shipping information | Negative | REQ-C5 |
+| TC-64 | Documentation ID | Complete order using Cash on Delivery | Positive | REQ-C6 |
+| TC-65 | Documentation ID | Verify unique Order ID and confirmation | Positive | REQ-C6 |
+| TC-66 | Documentation ID | Verify Card and UPI payment options | Positive | REQ-C6 |
 
-**Planned test cases:** 12
+**Total Test Cases:** 13.
 
-**Jira Test keys:** To be added after the corresponding Xray issues are created.
+**Jira User Stories Covered:** 6.
+
+**Note:** These are documentation IDs for the additional test scenarios. They should not be treated as confirmed Jira Test issue keys.
 
 ---
 
 ## 5. Add to Cart – REQ-C1
 
-### TC-29 – Add Available Product to Cart
+### TC-54 – Successfully Add Product to Cart
 
-| Field         | Details  |
-| ------------- | -------- |
-| Test Case ID  | TC-29    |
-| Category      | Positive |
-| Priority      | High     |
-| Requirement   | REQ-C1   |
-| Related Story | SEQ-14   |
+| Field | Details |
+|---|---|
+| Test Case ID | TC-54 |
+| Category | Positive |
+| Priority | High |
+| Requirement | REQ-C1 |
+| Related Story | SEQ-14 |
 
 **Preconditions:**
 
@@ -87,50 +92,53 @@ The following test cases are planned for this module.
 3. Select Add to Cart.
 4. Navigate to the shopping cart.
 5. Verify the selected product.
+6. Observe the cart icon.
 
 **Expected Result:**
 
-The selected product should be successfully added to the shopping cart.
+- The selected product should be successfully added to the shopping cart.
+- The cart icon should display the updated total item count.
 
-### TC-30 – Cart Icon Displays Total Item Count
+### TC-55 – Prevent Adding Unavailable Product to Cart
 
-| Field         | Details  |
-| ------------- | -------- |
-| Test Case ID  | TC-30    |
-| Category      | Positive |
-| Priority      | Medium   |
-| Requirement   | REQ-C1   |
-| Related Story | SEQ-14   |
+| Field | Details |
+|---|---|
+| Test Case ID | TC-55 |
+| Category | Negative |
+| Priority | High |
+| Requirement | REQ-C1 |
+| Related Story | SEQ-14 |
 
 **Preconditions:**
 
-- At least one product is available in the catalog.
+- A product marked as out of stock is available.
+- User can access the product details page.
 
 **Test Steps:**
 
-1. Open the ShopEasy application.
-2. Add one product to the cart.
-3. Observe the cart icon.
-4. Add another product.
-5. Observe the cart icon again.
+1. Open the product listing page.
+2. Select an out-of-stock product.
+3. Navigate to its details page.
+4. Observe the Add to Cart option.
+5. Attempt to add the product to the cart.
 
 **Expected Result:**
 
-The cart icon should display the total number of items in the cart and update when products are added.
+The application should prevent the unavailable product from being added to the shopping cart.
 
 ---
 
 ## 6. Quantity Management – REQ-C2
 
-### TC-31 – Update Product Quantity
+### TC-56 – Update Product Quantity
 
-| Field         | Details  |
-| ------------- | -------- |
-| Test Case ID  | TC-31    |
-| Category      | Positive |
-| Priority      | High     |
-| Requirement   | REQ-C2   |
-| Related Story | SEQ-15   |
+| Field | Details |
+|---|---|
+| Test Case ID | TC-56 |
+| Category | Positive |
+| Priority | High |
+| Requirement | REQ-C2 |
+| Related Story | SEQ-15 |
 
 **Preconditions:**
 
@@ -138,9 +146,9 @@ The cart icon should display the total number of items in the cart and update wh
 
 **Test Data:**
 
-| Product   | Initial Quantity | Updated Quantity |
-| --------- | ---------------: | ---------------: |
-| Product A |                1 |                3 |
+| Product | Initial Quantity | Updated Quantity |
+|---|---:|---:|
+| Product A | 1 | 3 |
 
 **Test Steps:**
 
@@ -154,15 +162,15 @@ The cart icon should display the total number of items in the cart and update wh
 
 The application should update the quantity and recalculate the line total correctly.
 
-### TC-32 – Validate Quantity Boundaries
+### TC-57 – Prevent Quantity Above 10
 
-| Field         | Details |
-| ------------- | ------- |
-| Test Case ID  | TC-32   |
-| Category      | Edge    |
-| Priority      | High    |
-| Requirement   | REQ-C2  |
-| Related Story | SEQ-15  |
+| Field | Details |
+|---|---|
+| Test Case ID | TC-57 |
+| Category | Boundary |
+| Priority | High |
+| Requirement | REQ-C2 |
+| Related Story | SEQ-15 |
 
 **Preconditions:**
 
@@ -170,12 +178,12 @@ The application should update the quantity and recalculate the line total correc
 
 **Test Data:**
 
-| Test Input | Expected Behavior                   |
-| ---------: | ----------------------------------- |
-|          0 | Reject or prevent quantity below 1  |
-|          1 | Accept                              |
-|         10 | Accept                              |
-|         11 | Reject or prevent quantity above 10 |
+| Test Input | Expected Behavior |
+|---:|---|
+| 0 | Reject or prevent quantity below 1 |
+| 1 | Accept |
+| 10 | Accept |
+| 11 | Reject or prevent quantity above 10 |
 
 **Test Steps:**
 
@@ -194,15 +202,15 @@ The application should allow quantities from 1 through 10 and prevent values out
 
 ## 7. Remove Cart Item – REQ-C3
 
-### TC-33 – Remove Product from Cart
+### TC-58 – Remove Product from Cart
 
-| Field         | Details  |
-| ------------- | -------- |
-| Test Case ID  | TC-33    |
-| Category      | Positive |
-| Priority      | High     |
-| Requirement   | REQ-C3   |
-| Related Story | SEQ-16   |
+| Field | Details |
+|---|---|
+| Test Case ID | TC-58 |
+| Category | Positive |
+| Priority | High |
+| Requirement | REQ-C3 |
+| Related Story | SEQ-16 |
 
 **Preconditions:**
 
@@ -220,15 +228,15 @@ The application should allow quantities from 1 through 10 and prevent values out
 
 The selected product should be removed, and the cart total should update immediately.
 
-### TC-34 – Display Empty Cart Message
+### TC-59 – Display Empty Cart Message
 
-| Field         | Details |
-| ------------- | ------- |
-| Test Case ID  | TC-34   |
-| Category      | Edge    |
-| Priority      | Medium  |
-| Requirement   | REQ-C3  |
-| Related Story | SEQ-16  |
+| Field | Details |
+|---|---|
+| Test Case ID | TC-59 |
+| Category | Edge |
+| Priority | Medium |
+| Requirement | REQ-C3 |
+| Related Story | SEQ-16 |
 
 **Preconditions:**
 
@@ -248,15 +256,15 @@ The application should display an appropriate empty-cart message.
 
 ## 8. Coupon Application – REQ-C4
 
-### TC-35 – Apply Valid SAVE10 Coupon
+### TC-60 – Apply Valid SAVE10 Coupon
 
-| Field         | Details  |
-| ------------- | -------- |
-| Test Case ID  | TC-35    |
-| Category      | Positive |
-| Priority      | High     |
-| Requirement   | REQ-C4   |
-| Related Story | SEQ-17   |
+| Field | Details |
+|---|---|
+| Test Case ID | TC-60 |
+| Category | Positive |
+| Priority | High |
+| Requirement | REQ-C4 |
+| Related Story | SEQ-17 |
 
 **Preconditions:**
 
@@ -266,12 +274,12 @@ The application should display an appropriate empty-cart message.
 
 **Test Data:**
 
-| Field            |     Value |
-| ---------------- | --------: |
-| Cart Value       | Rs. 1,500 |
-| Coupon Code      |    SAVE10 |
-| Discount         |       10% |
-| Discount Amount  |   Rs. 150 |
+| Field | Value |
+|---|---:|
+| Cart Value | Rs. 1,500 |
+| Coupon Code | SAVE10 |
+| Discount | 10% |
+| Discount Amount | Rs. 150 |
 | Final Cart Value | Rs. 1,350 |
 
 **Test Steps:**
@@ -286,15 +294,15 @@ The application should display an appropriate empty-cart message.
 
 The application should apply a 10% discount and display Rs. 1,350 as the final cart value.
 
-### TC-36 – Reject Coupon Below Minimum Cart Value
+### TC-61 – Reject Coupon Below Minimum Cart Value
 
-| Field         | Details  |
-| ------------- | -------- |
-| Test Case ID  | TC-36    |
-| Category      | Negative |
-| Priority      | Medium   |
-| Requirement   | REQ-C4   |
-| Related Story | SEQ-17   |
+| Field | Details |
+|---|---|
+| Test Case ID | TC-61 |
+| Category | Negative |
+| Priority | Medium |
+| Requirement | REQ-C4 |
+| Related Story | SEQ-17 |
 
 **Preconditions:**
 
@@ -303,10 +311,10 @@ The application should apply a 10% discount and display Rs. 1,350 as the final c
 
 **Test Data:**
 
-| Field       |   Value |
-| ----------- | ------: |
-| Cart Value  | Rs. 800 |
-| Coupon Code |  SAVE10 |
+| Field | Value |
+|---|---:|
+| Cart Value | Rs. 800 |
+| Coupon Code | SAVE10 |
 
 **Test Steps:**
 
@@ -324,40 +332,15 @@ The application should reject the coupon because the minimum cart value requirem
 
 ## 9. Checkout – REQ-C5
 
-### TC-37 – Prevent Checkout Without Login
+### TC-62 – Complete Checkout with Valid Shipping Details
 
-| Field         | Details  |
-| ------------- | -------- |
-| Test Case ID  | TC-37    |
-| Category      | Negative |
-| Priority      | High     |
-| Requirement   | REQ-C5   |
-| Related Story | SEQ-18   |
-
-**Preconditions:**
-
-- User is not authenticated.
-- At least one product is present in the cart.
-
-**Test Steps:**
-
-1. Open the shopping cart.
-2. Select the Checkout option.
-3. Observe the application's response.
-
-**Expected Result:**
-
-The application should prevent guest checkout and require the user to log in before proceeding.
-
-### TC-38 – Validate Mandatory Shipping Information
-
-| Field         | Details  |
-| ------------- | -------- |
-| Test Case ID  | TC-38    |
-| Category      | Negative |
-| Priority      | High     |
-| Requirement   | REQ-C5   |
-| Related Story | SEQ-18   |
+| Field | Details |
+|---|---|
+| Test Case ID | TC-62 |
+| Category | Positive |
+| Priority | High |
+| Requirement | REQ-C5 |
+| Related Story | SEQ-18 |
 
 **Preconditions:**
 
@@ -366,13 +349,53 @@ The application should prevent guest checkout and require the user to log in bef
 
 **Test Data:**
 
-| Field         | Test Value |
-| ------------- | ---------- |
-| Shipping Name | Test User  |
-| Phone Number  | 12345      |
-| Address       | Empty      |
-| City          | Hyderabad  |
-| Pin Code      | 500001     |
+| Field | Test Value |
+|---|---|
+| Shipping Name | Test User |
+| Phone Number | 9876543210 |
+| Address | 12, Main Road |
+| City | Hyderabad |
+| Pin Code | 500001 |
+
+**Test Steps:**
+
+1. Log in to the application.
+2. Add a product to the cart.
+3. Proceed to checkout.
+4. Enter a valid shipping name.
+5. Enter a valid 10-digit phone number.
+6. Enter the shipping address.
+7. Enter the city and six-digit pin code.
+8. Submit the checkout form.
+
+**Expected Result:**
+
+The application should accept the valid shipping information and allow the user to proceed to the payment stage.
+
+### TC-63 – Reject Invalid Shipping Information
+
+| Field | Details |
+|---|---|
+| Test Case ID | TC-63 |
+| Category | Negative |
+| Priority | High |
+| Requirement | REQ-C5 |
+| Related Story | SEQ-18 |
+
+**Preconditions:**
+
+- User is authenticated.
+- At least one product is present in the cart.
+
+**Test Data:**
+
+| Field | Test Value |
+|---|---|
+| Shipping Name | Test User |
+| Phone Number | 12345 |
+| Address | Empty |
+| City | Hyderabad |
+| Pin Code | 500001 |
 
 **Test Steps:**
 
@@ -392,49 +415,45 @@ The application should prevent checkout and display validation messages for the 
 
 ## 10. Payment and Order Confirmation – REQ-C6
 
-### TC-39 – Complete Checkout Using Supported Payment Methods
+### TC-64 – Complete Order Using Cash on Delivery
 
-| Field         | Details  |
-| ------------- | -------- |
-| Test Case ID  | TC-39    |
-| Category      | Positive |
-| Priority      | High     |
-| Requirement   | REQ-C6   |
-| Related Story | SEQ-19   |
+| Field | Details |
+|---|---|
+| Test Case ID | TC-64 |
+| Category | Positive |
+| Priority | High |
+| Requirement | REQ-C6 |
+| Related Story | SEQ-19 |
 
 **Preconditions:**
 
 - User is authenticated.
 - A product is present in the cart.
 - Valid shipping information has been entered.
-
-**Payment Methods:**
-
-- Card
-- UPI
-- Cash on Delivery (COD)
+- Cash on Delivery is available.
 
 **Test Steps:**
 
 1. Proceed to checkout.
 2. Enter valid shipping details.
-3. Select Card as the payment method.
-4. Complete the payment using an approved test payment setup.
-5. Repeat the payment selection and checkout flow for UPI and COD using appropriate test conditions.
+3. Select Cash on Delivery (COD).
+4. Review the order summary.
+5. Confirm the order.
+6. Observe the application response.
 
 **Expected Result:**
 
-The application should support all three payment methods and process the order according to the selected payment method.
+The application should successfully place the order using Cash on Delivery and display the order confirmation.
 
-### TC-40 – Verify Order Confirmation Details
+### TC-65 – Verify Unique Order ID and Confirmation
 
-| Field         | Details  |
-| ------------- | -------- |
-| Test Case ID  | TC-40    |
-| Category      | Positive |
-| Priority      | High     |
-| Requirement   | REQ-C6   |
-| Related Story | SEQ-19   |
+| Field | Details |
+|---|---|
+| Test Case ID | TC-65 |
+| Category | Positive |
+| Priority | High |
+| Requirement | REQ-C6 |
+| Related Story | SEQ-19 |
 
 **Preconditions:**
 
@@ -449,23 +468,57 @@ The application should support all three payment methods and process the order a
 3. Observe the order confirmation page.
 4. Verify the generated Order ID.
 5. Check the registered email inbox.
+6. Verify the order confirmation details.
 
 **Expected Result:**
 
-The application should display an order confirmation page with a unique Order ID and send a confirmation email to the registered email address.
+- The application should display an order confirmation page.
+- A unique Order ID should be generated.
+- The order confirmation email should be sent to the registered email address.
+
+### TC-66 – Verify Card and UPI Payment Options
+
+| Field | Details |
+|---|---|
+| Test Case ID | TC-66 |
+| Category | Positive |
+| Priority | High |
+| Requirement | REQ-C6 |
+| Related Story | SEQ-19 |
+
+**Preconditions:**
+
+- User is authenticated.
+- A product is present in the cart.
+- Valid shipping information has been entered.
+- Card and UPI payment options are available.
+
+**Test Steps:**
+
+1. Proceed to checkout.
+2. Enter valid shipping information.
+3. Select Card as the payment method.
+4. Verify that the card payment option is available.
+5. Return to the payment selection stage.
+6. Select UPI as the payment method.
+7. Verify that the UPI payment option is available.
+
+**Expected Result:**
+
+The application should display both Card and UPI as supported payment methods and allow the user to proceed with the selected payment option.
 
 ---
 
 ## 11. Requirement Traceability
 
-| Requirement | Jira Story | Test Cases   |
-| ----------- | ---------- | ------------ |
-| REQ-C1      | SEQ-14     | TC-29, TC-30 |
-| REQ-C2      | SEQ-15     | TC-31, TC-32 |
-| REQ-C3      | SEQ-16     | TC-33, TC-34 |
-| REQ-C4      | SEQ-17     | TC-35, TC-36 |
-| REQ-C5      | SEQ-18     | TC-37, TC-38 |
-| REQ-C6      | SEQ-19     | TC-39, TC-40 |
+| Requirement | Jira Story | Test Cases |
+|---|---|---|
+| REQ-C1 | SEQ-14 | TC-54, TC-55 |
+| REQ-C2 | SEQ-15 | TC-56, TC-57 |
+| REQ-C3 | SEQ-16 | TC-58, TC-59 |
+| REQ-C4 | SEQ-17 | TC-60, TC-61 |
+| REQ-C5 | SEQ-18 | TC-62, TC-63 |
+| REQ-C6 | SEQ-19 | TC-64, TC-65, TC-66 |
 
 ## 12. Test Design Techniques
 
@@ -479,14 +532,25 @@ The following testing techniques are represented:
 - Calculation Verification
 - Payment Workflow Testing
 - Order Confirmation Testing
+- Requirement-Based Testing
 
 ## 13. Conclusion
 
 The Cart and Checkout test cases validate the main purchasing workflow of the ShopEasy application.
 
-They cover cart operations, quantity limits, coupon eligibility, checkout validation, payment methods, and order confirmation.
+The test scenarios cover:
 
-The test cases are mapped to their corresponding requirements and Jira User Stories to maintain traceability throughout the testing process.
+- Adding products to the shopping cart.
+- Managing product quantities.
+- Removing products from the cart.
+- Applying coupons and verifying discount calculations.
+- Validating checkout and shipping information.
+- Verifying supported payment methods.
+- Checking order confirmation and unique Order ID generation.
+
+A total of 13 test scenarios are documented and mapped to six Jira User Stories and their corresponding functional requirements.
+
+This documentation provides structured functional test coverage and maintains requirement traceability across the Cart and Checkout module.
 
 ---
 
