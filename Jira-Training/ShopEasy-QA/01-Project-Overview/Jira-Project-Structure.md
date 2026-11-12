@@ -1,12 +1,20 @@
 # ShopEasy QA – Jira Project Structure
 
+![Jira](https://img.shields.io/badge/Project-Jira%20QA-blue)
+![Project Documentation](https://img.shields.io/badge/Documentation-Completed-brightgreen)
+
 ## 1. Introduction
 
 Jira provides a structured way to organize project activities using different issue types and relationships.
 
 The ShopEasy QA project uses Jira Scrum and Xray to manage application requirements, sprint activities, test cases, test planning, test execution, and defects.
 
-This document explains the Jira project hierarchy, issue types, relationships, and the current project structure.
+This document explains the Jira project hierarchy, issue types, relationships, and overall project structure.
+
+**Project Name:** ShopEasy QA  
+**Project Key:** SEQ  
+**Project Type:** Scrum  
+**Documentation Status:** Completed
 
 ## 2. Project Hierarchy
 
@@ -34,13 +42,15 @@ Jira Project: ShopEasy QA (SEQ)
 
 An Epic represents a large functional area of the application. It groups multiple related User Stories under one major objective.
 
-The ShopEasy QA project contains three Epics:
+The ShopEasy QA project contains three Epics.
 
-| Epic Key | Epic Name | Description | Status |
+| Epic Key | Epic Name | Description | Jira Status |
 |---|---|---|---|
 | SEQ-1 | Account and Login | User registration, authentication, account security, password recovery, and logout. | To Do |
 | SEQ-7 | Browse And Search | Product listing, searching, filtering, sorting, and product details. | To Do |
 | SEQ-13 | Cart and Checkout | Cart management, coupons, checkout, payment, and order confirmation. | To Do |
+
+**Total Epics:** 3
 
 ## 4. User Story
 
@@ -50,18 +60,22 @@ Each story belongs to an Epic and contains a description and acceptance criteria
 
 The project contains 16 User Stories.
 
-| Epic | Total Stories | Status |
+### User Story Distribution
+
+| Epic | Total Stories | Jira Status |
 |---|---:|---|
 | Account and Login | 5 | 5 Done |
 | Browse And Search | 5 | 5 In Progress |
 | Cart and Checkout | 6 | 6 To Do |
 | **Total** | **16** | |
 
-### User Story Distribution
+### User Story Keys
 
 - **Done:** SEQ-2 to SEQ-6.
 - **In Progress:** SEQ-8 to SEQ-12.
 - **To Do:** SEQ-14 to SEQ-19.
+
+The User Stories cover the major functionalities of the ShopEasy online shopping application.
 
 ## 5. Task
 
@@ -76,6 +90,8 @@ Tasks can be used for activities such as:
 - Test reporting.
 
 The current Jira export contains one Task issue.
+
+**Current Jira Status:** To Do
 
 ## 6. Sub-task
 
@@ -92,7 +108,7 @@ Sub-tasks can be used for:
 
 A Sub-task must be associated with a parent issue.
 
-**Current status:** No Sub-task issue is listed in the latest Jira export.
+**Current Status:** No Sub-task issue is listed in the available Jira export.
 
 ## 7. Bug
 
@@ -115,6 +131,20 @@ A bug report contains:
 
 The current Jira export contains one Bug issue.
 
+### Existing Bug Record
+
+| Field | Details |
+|---|---|
+| Logical ID | BUG-01 |
+| Jira Issue Key | SEQ-43 |
+| Related Test Issue | SEQ-27 |
+| Related Test Case | TC-08 – Invalid Credentials |
+| Status | To Do |
+| Assignee | Unassigned |
+| Resolution | Not recorded |
+
+### Bug Statistics
+
 | Metric | Count |
 |---|---:|
 | Bugs Created | 1 |
@@ -124,7 +154,7 @@ The current Jira export contains one Bug issue.
 | Bugs Closed | 0 |
 | Bugs Pending | 1 |
 
-The existing bug is currently in the **To Do** status.
+The existing Bug is currently recorded in the **To Do** status.
 
 ## 8. Xray Test Management Issue Types
 
@@ -138,7 +168,14 @@ It contains the test scenario, preconditions, test steps, test data, and expecte
 
 The current project contains **23 Test issues**.
 
-All 23 Test issues are currently in the To Do status.
+| Metric | Count |
+|---|---:|
+| Total Test Issues | 23 |
+| Done | 0 |
+| In Progress | 0 |
+| To Do | 23 |
+
+All 23 Test issues are currently recorded in the To Do status.
 
 ### 8.2 Test Set
 
@@ -146,13 +183,15 @@ A Test Set groups related Test issues.
 
 It helps organize test cases based on functionality or testing scope.
 
-The project contains three Test Sets:
+The project contains three Test Sets.
 
 | Jira Key | Test Set | Status |
 |---|---|---|
-| SEQ-38 | Registration Test Suite | To Do |
-| SEQ-39 | Login Test Suite | To Do |
-| SEQ-40 | Account Security Test Suite | To Do |
+| SEQ-38 | Registration Test Set | To Do |
+| SEQ-39 | Login Test Set | To Do |
+| SEQ-40 | Account Security Test Set | To Do |
+
+**Total Test Sets:** 3
 
 ### 8.3 Test Plan
 
@@ -160,11 +199,13 @@ A Test Plan organizes testing activities by including relevant Test Sets and Tes
 
 It helps manage testing activities associated with a release, sprint, or functional module.
 
-The project contains one Test Plan:
+The project contains one Test Plan.
 
 | Jira Key | Test Plan | Status |
 |---|---|---|
-| SEQ-41 | Sprint 1 Test Plan | To Do |
+| SEQ-41 | Sprint 1 Account and Login Test Plan | To Do |
+
+**Total Test Plans:** 1
 
 ### 8.4 Test Execution
 
@@ -172,13 +213,15 @@ A Test Execution records the results of running selected test cases.
 
 It maintains execution statuses and provides visibility into testing progress.
 
-The project contains one Test Execution:
+The project contains one Test Execution.
 
 | Jira Key | Test Execution | Status |
 |---|---|---|
 | SEQ-42 | Sprint 1 Test Execution | To Do |
 
-**Note:** The existence of a Test Execution issue does not mean that the test cases have been executed. The current export shows that the execution issue is still To Do.
+**Total Test Executions:** 1
+
+**Note:** The existence of a Test Execution issue does not mean that the test cases have been executed. The available Jira export shows that the execution issue is still To Do.
 
 ## 9. Issue Relationships
 
@@ -220,16 +263,18 @@ Functional Requirement
   Bug (If Found)
         |
         v
-   Retesting
+     Retesting
 ```
 
 This structure helps identify which requirement and functionality are affected by a failed test.
 
+It also provides a structured approach to connecting application requirements with testing and defect management activities.
+
 ## 11. Current Jira Project Summary
 
-The latest Jira CSV export contains 49 issues.
+The available Jira CSV export contains 49 issues.
 
-| Issue Type | Total Issues | Current Progress |
+| Issue Type | Total Issues | Current Jira Status |
 |---|---:|---|
 | Epic | 3 | 3 To Do |
 | User Story | 16 | 5 Done, 5 In Progress, 6 To Do |
@@ -241,7 +286,7 @@ The latest Jira CSV export contains 49 issues.
 | Bug | 1 | 1 To Do |
 | **Total** | **49** | |
 
-### Project Progress Overview
+### Project Overview
 
 - Three Epics have been created.
 - Sixteen User Stories have been created and organized under the Epics.
@@ -250,11 +295,15 @@ The latest Jira CSV export contains 49 issues.
 - One Test Plan has been created.
 - One Test Execution has been created.
 - One Bug has been reported.
-- Five User Stories have been completed, while the remaining stories are in progress or pending.
+- Five User Stories are recorded as Done.
+- Five User Stories are recorded as In Progress.
+- Six User Stories are recorded as To Do.
+
+**Note:** These statistics represent the Jira export at the time it was generated. Documentation completion does not automatically change the actual Jira issue statuses.
 
 ## 12. Logical Identification Convention
 
-The project uses the following identifiers in its documentation:
+The project uses the following identifiers in its documentation.
 
 | Project Item | Identifier | Example |
 |---|---|---|
@@ -266,18 +315,45 @@ The project uses the following identifiers in its documentation:
 | Test Execution | TE-XX | TE-01 |
 | Bug | BUG-XX | BUG-01 |
 
-These identifiers are used for documentation and easier reference. Jira issue keys remain the official issue identifiers.
+These identifiers are used for documentation and easier reference.
 
-## 13. Conclusion
+Jira issue keys remain the official issue identifiers.
+
+## 13. Project Documentation Completion Summary
+
+The Jira Project Structure documentation covers the following areas:
+
+| No. | Documentation Area | Status |
+|---|---|---|
+| 1 | Project Hierarchy | Completed |
+| 2 | Epic Structure | Completed |
+| 3 | User Story Organization | Completed |
+| 4 | Task and Sub-task Documentation | Completed |
+| 5 | Bug Management Structure | Completed |
+| 6 | Xray Test Issue Types | Completed |
+| 7 | Test Sets and Test Plans | Completed |
+| 8 | Test Execution Structure | Completed |
+| 9 | Issue Relationships | Completed |
+| 10 | Requirement Traceability | Completed |
+| 11 | Jira Project Statistics | Completed |
+| 12 | Logical Identification Convention | Completed |
+
+**Overall Documentation Status: Completed**
+
+## 14. Conclusion
 
 The ShopEasy QA Jira project uses a structured approach to organize application requirements, user stories, test cases, test planning, test execution, and defect tracking.
 
 Epics and User Stories organize application functionality, while Xray provides dedicated issue types for test design, test grouping, planning, and execution.
 
-The current project contains 49 Jira issues across different issue types. User Story implementation and testing activities are at different stages of progress.
+The current project contains 49 Jira issues across different issue types.
 
-This structure provides a foundation for requirement traceability, test management, and defect tracking throughout the QA project.
+The documentation provides a clear overview of the project hierarchy, issue relationships, requirement traceability, and test management structure.
+
+This structure provides a foundation for organized QA activities and demonstrates the use of Jira and Xray for software test management.
 
 ---
+
+**Documentation Status: Completed**
 
 **End of Document**
