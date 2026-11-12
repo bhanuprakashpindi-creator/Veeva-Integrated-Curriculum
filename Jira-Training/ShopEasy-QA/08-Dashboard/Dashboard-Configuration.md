@@ -2,12 +2,12 @@
 
 ## 1. Introduction
 
-The ShopEasy QA Dashboard provides a centralized view of project progress, sprint activities, defects, and test execution results.
+The ShopEasy QA Dashboard provides a centralized view of project progress, sprint activities, defects, and test management information.
 
-The dashboard is intended to help the QA team monitor testing progress, identify critical defects, and understand the overall quality of the ShopEasy application.
+The dashboard is designed to help the QA team monitor sprint progress, identify important defects, track issue trends, and review test execution results.
 
-**Dashboard Name:** ShopEasy QA Dashboard
-**Project Key:** SEQ
+**Dashboard Name:** ShopEasy QA Dashboard  
+**Project Key:** SEQ  
 **Project Type:** Scrum
 
 ## 2. Dashboard Objectives
@@ -19,11 +19,13 @@ The dashboard is designed to:
 - Identify critical and high-priority bugs.
 - Monitor created and resolved issues.
 - Review Xray test execution results.
+- Track testing progress.
 - Provide a centralized view of QA activities.
+- Support project monitoring and decision-making.
 
 ## 3. Dashboard Gadgets
 
-The following gadgets are planned for the ShopEasy QA Dashboard.
+The following gadgets are included in the proposed ShopEasy QA Dashboard configuration.
 
 ### 3.1 Sprint Burndown
 
@@ -36,9 +38,13 @@ The following gadgets are planned for the ShopEasy QA Dashboard.
 - Sprint progress over time.
 - Work remaining until the sprint ends.
 
-**Expected benefit:** Helps understand whether the sprint is progressing according to its plan.
+**Expected benefit:** Helps understand whether the sprint is progressing according to its planned schedule.
 
-**Implementation status:** To be verified in Jira.
+**Configuration:**
+
+- Select the active sprint.
+- Configure the estimation statistic.
+- Display the remaining work throughout the sprint.
 
 ### 3.2 Pie Chart – Bugs by Status
 
@@ -50,17 +56,19 @@ The following gadgets are planned for the ShopEasy QA Dashboard.
 - Issue Type: Bug
 - Statistic Type: Status
 
-**Expected categories:**
+**Expected categories:** Categories depend on the actual Jira workflow configuration.
 
-- Open
+Typical categories include:
+
+- To Do
 - In Progress
-- Fixed
-- Retest
-- Closed
+- Done
 
-**Expected benefit:** Helps identify how many defects are unresolved, being fixed, or closed.
+**Expected benefit:** Helps identify the distribution of defects across their workflow stages.
 
-**Implementation status:** Planned.
+**Related Jira Bug:** SEQ-43
+
+The project export contains one Bug issue, currently recorded as To Do.
 
 ### 3.3 Created vs Resolved Chart
 
@@ -72,9 +80,12 @@ The following gadgets are planned for the ShopEasy QA Dashboard.
 - Period: Weekly
 - Display: Created and Resolved issues
 
-**Expected benefit:** Helps monitor whether the team is resolving issues at a suitable rate.
+**Expected benefit:**
 
-**Implementation status:** Planned.
+- Monitor issue creation trends.
+- Track issue resolution trends.
+- Understand whether unresolved issues are accumulating.
+- Review project progress over time.
 
 ### 3.4 Filter Results – Open Critical Bugs
 
@@ -99,9 +110,9 @@ ORDER BY priority DESC
 - Assignee
 - Created Date
 
-**Expected benefit:** Provides quick access to defects that need immediate attention.
+**Expected benefit:** Provides quick access to defects that require attention.
 
-**Implementation status:** Planned. The saved filter must be created and selected in the gadget.
+**Note:** The current Jira export contains one Bug issue (SEQ-43). Its priority should be verified in Jira before determining whether it appears in this filter.
 
 ### 3.5 Test Execution Results
 
@@ -115,11 +126,23 @@ ORDER BY priority DESC
 - Blocked tests.
 - Tests not yet executed.
 
-**Expected benefit:** Helps evaluate the testing progress and identify areas requiring additional attention.
+**Related Jira Issues:**
 
-**Implementation status:** Planned. Configure an available Xray gadget or an appropriate Jira chart after verifying the installed Xray dashboard gadgets.
+| Component | Jira Issue Key |
+|---|---|
+| Test Plan | SEQ-41 |
+| Test Execution | SEQ-42 |
+| Registration Test Set | SEQ-38 |
+| Login Test Set | SEQ-39 |
+| Account Security Test Set | SEQ-40 |
+
+**Expected benefit:** Helps evaluate testing progress and identify areas requiring additional attention.
+
+The available Jira export records the Test Plan, Test Execution, Test Sets, and associated test issues as To Do. Actual execution statistics must therefore be taken from updated Xray execution results.
 
 ## 4. Dashboard Creation Steps
+
+The following steps describe the dashboard setup process in Jira.
 
 1. Open Jira.
 2. Navigate to **Dashboards**.
@@ -133,41 +156,44 @@ ORDER BY priority DESC
 10. Configure each gadget using the appropriate project, saved filter, and display settings.
 11. Arrange the gadgets for easy visibility.
 12. Save the dashboard configuration.
+13. Verify that each gadget displays the expected information.
 
 ## 5. Recommended Dashboard Layout
 
-The following layout is proposed:
+The following layout is recommended for the ShopEasy QA Dashboard.
 
-| Position     | Gadget                              | Purpose                  |
-| ------------ | ----------------------------------- | ------------------------ |
-| Top Left     | Sprint Burndown                     | Sprint progress          |
-| Top Right    | Pie Chart – Bugs by Status          | Defect distribution      |
-| Middle Left  | Created vs Resolved                 | Issue trends             |
+| Position | Gadget | Purpose |
+|---|---|---|
+| Top Left | Sprint Burndown | Sprint progress |
+| Top Right | Pie Chart – Bugs by Status | Defect distribution |
+| Middle Left | Created vs Resolved | Issue trends |
 | Middle Right | Filter Results – Open Critical Bugs | Priority defect tracking |
-| Bottom       | Test Execution Results              | Testing progress         |
+| Bottom | Test Execution Results | Testing progress |
 
-## 6. Dashboard Status Tracking
+The layout provides a consolidated view of sprint activities, defects, and test management information.
 
-The following table distinguishes planned configuration from verified implementation.
+## 6. Dashboard Configuration Summary
 
-| No. | Dashboard Component              | Status               |
-| --- | -------------------------------- | -------------------- |
-| 1   | ShopEasy QA Dashboard creation   | To be verified       |
-| 2   | Sprint Burndown gadget           | To be verified       |
-| 3   | Bugs by Status gadget            | Planned              |
-| 4   | Created vs Resolved gadget       | Planned              |
-| 5   | Open Critical Bugs gadget        | Planned              |
-| 6   | Test Execution Results gadget    | Planned              |
-| 7   | Dashboard layout and arrangement | Pending verification |
-| 8   | Dashboard screenshot             | Pending              |
+The following table tracks the dashboard components and their verification status.
 
-Update this table after completing and verifying each activity in Jira.
+| No. | Dashboard Component | Configuration Status |
+|---|---|---|
+| 1 | ShopEasy QA Dashboard creation | To be verified in Jira |
+| 2 | Sprint Burndown gadget | To be verified in Jira |
+| 3 | Bugs by Status gadget | Configuration to be verified |
+| 4 | Created vs Resolved gadget | Configuration to be verified |
+| 5 | Open Critical Bugs gadget | Saved filter and gadget to be verified |
+| 6 | Test Execution Results gadget | Xray gadget availability to be verified |
+| 7 | Dashboard layout and arrangement | To be verified in Jira |
+| 8 | Dashboard screenshots | Evidence to be added |
+
+**Verification note:** The dashboard configuration and gadget availability should be confirmed in Jira before marking these activities as completed.
 
 ## 7. Dashboard Screenshots
 
-Screenshots should be captured after the dashboard is configured.
+Screenshots provide visual evidence of the dashboard configuration.
 
-Recommended screenshots:
+The following screenshots are recommended:
 
 - Complete ShopEasy QA Dashboard.
 - Sprint Burndown gadget.
@@ -176,14 +202,14 @@ Recommended screenshots:
 - Open Critical Bugs list.
 - Test Execution Results.
 
-Store the screenshots in:
+Store the screenshots in the following directory:
 
 ```text
 08-Dashboard/
 └── Screenshots/
 ```
 
-Suggested screenshot names:
+### Suggested Screenshot Names
 
 ```text
 dashboard-overview.png
@@ -194,13 +220,29 @@ open-critical-bugs.png
 test-execution-results.png
 ```
 
-## 8. Conclusion
+Screenshots should show the actual Jira dashboard and its configured gadgets.
 
-The ShopEasy QA Dashboard is intended to provide a centralized monitoring interface for sprint progress, defect management, and test execution.
+## 8. Dashboard Benefits
 
-The proposed gadgets will help the QA team identify project risks, monitor unresolved defects, and evaluate testing progress.
+The ShopEasy QA Dashboard provides the following benefits:
 
-Dashboard components must be configured and verified in Jira before being reported as completed.
+- Centralized monitoring of QA activities.
+- Better visibility into sprint progress.
+- Easier identification of unresolved defects.
+- Monitoring of issue creation and resolution trends.
+- Improved visibility into test execution progress.
+- Faster access to important project information.
+- Support for QA reporting and project reviews.
+
+## 9. Conclusion
+
+The ShopEasy QA Dashboard is designed to provide a centralized monitoring interface for sprint progress, defect management, and test execution.
+
+The proposed gadgets cover sprint monitoring, defect distribution, issue trends, priority defect tracking, and Xray test execution.
+
+Together, these components provide a structured view of QA activities and help identify project risks.
+
+The dashboard configuration should be verified in Jira, with screenshots maintained as supporting project evidence.
 
 ---
 
