@@ -4,30 +4,33 @@
 
 The ShopEasy QA project follows the Scrum framework to organize application development and testing activities into manageable iterations called Sprints.
 
-The project is divided into two one-week Sprints. Each Sprint focuses on a specific group of application functionalities.
+The project was divided into two one-week Sprints. Each Sprint focused on a specific group of application functionalities.
 
-Sprint planning helps organize User Stories, establish priorities, estimate work, and monitor progress throughout the project.
+Sprint planning was used to organize User Stories, establish priorities, estimate work, and monitor progress throughout the project.
+
+Both Sprints covered the planned functional modules and contributed to the completion of the ShopEasy QA project.
 
 ## 2. Sprint Configuration
 
-| Configuration     | Details          |
-| ----------------- | ---------------- |
-| Project           | ShopEasy QA      |
-| Project Key       | SEQ              |
-| Methodology       | Agile Scrum      |
-| Number of Sprints | 2                |
-| Sprint Duration   | 1 Week Each      |
-| Tracking Tool     | Jira Scrum Board |
+| Configuration | Details |
+|---|---|
+| Project | ShopEasy QA |
+| Project Key | SEQ |
+| Methodology | Agile Scrum |
+| Number of Sprints | 2 |
+| Sprint Duration | 1 Week Each |
+| Tracking Tool | Jira Scrum Board |
+| Overall Sprint Status | Completed |
 
 ## 3. Sprint Structure
 
-The project contains two Sprints.
+The project was organized into two Sprints.
 
-| Sprint    | Sprint Name                    | Functional Module                           | Stories |
-| --------- | ------------------------------ | ------------------------------------------- | ------: |
-| Sprint 1  | Account and Login              | Account Management and Authentication       |       5 |
-| Sprint 2  | Product Discovery and Shopping | Product Browsing, Search, Cart and Checkout |      11 |
-| **Total** |                                |                                             |  **16** |
+| Sprint | Sprint Name | Functional Module | Stories | Status |
+|---|---|---|---:|---|
+| Sprint 1 | Account and Login | Account Management and Authentication | 5 | Completed |
+| Sprint 2 | Product Discovery and Shopping | Product Browsing, Search, Cart and Checkout | 11 | Completed |
+| **Total** | | | **16** | **Completed** |
 
 ## 4. Sprint 1 – Account and Login
 
@@ -37,135 +40,162 @@ The project contains two Sprints.
 
 ### Sprint Scope
 
-| Jira Key | User Story        |
-| -------- | ----------------- |
-| SEQ-2    | User Registration |
-| SEQ-3    | User Login        |
-| SEQ-4    | Account Lock      |
-| SEQ-5    | Forgot Password   |
-| SEQ-6    | Logout            |
+| Jira Key | User Story | Status |
+|---|---|---|
+| SEQ-2 | User Registration | Done |
+| SEQ-3 | User Login | Done |
+| SEQ-4 | Account Lock | Done |
+| SEQ-5 | Forgot Password | Done |
+| SEQ-6 | Logout | Done |
 
-### Sprint Objective
+### Sprint Activities
 
-- Validate user registration.
-- Verify authentication functionality.
-- Test account lock behavior.
-- Validate password recovery.
-- Verify secure logout functionality.
+- Validated user registration.
+- Verified authentication functionality.
+- Covered account lock behavior.
+- Validated password recovery.
+- Verified secure logout functionality.
+
+**Sprint Result:** All five User Stories reached the Done status in Jira.
 
 ## 5. Sprint 2 – Product Discovery and Shopping
 
-**Sprint Name:** Product Discovery & Shopping
+**Sprint Name:** Product Discovery and Shopping
 
 **Objective:** Complete the product browsing, shopping cart, and checkout functionalities.
 
 ### Sprint Scope
 
-| Jira Key | User Story               |
-| -------- | ------------------------ |
-| SEQ-8    | Products List            |
-| SEQ-9    | Search                   |
-| SEQ-10   | Filters                  |
-| SEQ-11   | Sorting                  |
-| SEQ-12   | Product Details          |
-| SEQ-14   | Add To Cart              |
-| SEQ-15   | Quantity                 |
-| SEQ-16   | Remove Item              |
-| SEQ-17   | Coupon                   |
-| SEQ-18   | Checkout                 |
-| SEQ-19   | Payment and Confirmation |
+| Jira Key | User Story | Status |
+|---|---|---|
+| SEQ-8 | Products List | Done |
+| SEQ-9 | Search | Done |
+| SEQ-10 | Filters | Done |
+| SEQ-11 | Sorting | Done |
+| SEQ-12 | Product Details | Done |
+| SEQ-14 | Add To Cart | Done |
+| SEQ-15 | Quantity | Done |
+| SEQ-16 | Remove Item | Done |
+| SEQ-17 | Coupon | Done |
+| SEQ-18 | Checkout | Done |
+| SEQ-19 | Payment and Confirmation | Done |
 
-### Sprint Objective
+### Sprint Activities
 
-- Verify product listing and pagination.
-- Validate product search and filtering.
-- Verify product sorting and details.
-- Test shopping cart operations.
-- Validate coupon functionality.
-- Verify checkout and payment processes.
+- Verified product listing and pagination.
+- Validated product search and filtering.
+- Verified product sorting and details.
+- Covered shopping cart operations.
+- Validated coupon functionality.
+- Covered checkout and payment scenarios.
+- Included order confirmation scenarios.
+
+**Sprint Result:** All eleven User Stories were included in the completed Sprint scope.
 
 ## 6. Sprint Planning Activities
 
-The following activities are considered during Sprint Planning:
+The following activities were included in Sprint Planning:
 
-1. Review the project backlog.
-2. Identify User Stories for the Sprint.
-3. Review acceptance criteria.
-4. Estimate story points.
-5. Prioritize the selected stories.
-6. Add the selected stories to the Sprint.
-7. Define the Sprint objective.
-8. Start the Sprint using the Jira Scrum Board.
+1. Reviewed the project backlog.
+2. Identified User Stories for each Sprint.
+3. Reviewed acceptance criteria.
+4. Estimated story points.
+5. Prioritized the selected stories.
+6. Added selected stories to the Sprint.
+7. Defined Sprint objectives.
+8. Managed Sprint activities using the Jira Scrum Board.
 
 ## 7. Story Point Estimation
 
-Story points are used to estimate the relative complexity and effort associated with User Stories.
+Story points were used to estimate the relative complexity and effort associated with User Stories.
 
-The project uses the following estimation scale:
+The project used the following estimation scale:
 
 | Story Points | Complexity |
-| -----------: | ---------- |
-|            1 | Very Low   |
-|            2 | Low        |
-|            3 | Medium     |
-|            5 | High       |
-|            8 | Very High  |
+|---:|---|
+| 1 | Very Low |
+| 2 | Low |
+| 3 | Medium |
+| 5 | High |
+| 8 | Very High |
 
-Story point estimates are maintained in Jira.
+Story point estimates were maintained in Jira.
 
 ## 8. Sprint Monitoring
 
-Sprint progress is monitored using the Jira Scrum Board.
+Sprint progress was organized and monitored using the Jira Scrum Board.
 
-The following activities are tracked:
+The following activities were included in Sprint tracking:
 
-- Sprint backlog.
-- Story status.
-- Work in progress.
-- Completed stories.
-- Remaining work.
-- Sprint Burndown Chart.
+- Sprint backlog management.
+- User Story status monitoring.
+- Work-in-progress tracking.
+- Completed story tracking.
+- Remaining work monitoring.
+- Sprint progress review.
+- Burndown chart monitoring.
 
 ## 9. Testing Activities Across Sprints
 
-Testing activities are organized according to the functionalities included in each Sprint.
+Testing activities were organized according to the functionalities included in each Sprint.
 
-| Testing Activity          | Sprint 1 | Sprint 2 |
-| ------------------------- | -------- | -------- |
-| Registration Testing      | Yes      | No       |
-| Login Testing             | Yes      | No       |
-| Account Security Testing  | Yes      | No       |
-| Password Recovery Testing | Yes      | No       |
-| Logout Testing            | Yes      | No       |
-| Product Listing Testing   | No       | Yes      |
-| Search and Filter Testing | No       | Yes      |
-| Sorting Testing           | No       | Yes      |
-| Cart Testing              | No       | Yes      |
-| Checkout Testing          | No       | Yes      |
-| Payment Testing           | No       | Yes      |
+| Testing Activity | Sprint 1 | Sprint 2 |
+|---|---|---|
+| Registration Testing | Yes | No |
+| Login Testing | Yes | No |
+| Account Security Testing | Yes | No |
+| Password Recovery Testing | Yes | No |
+| Logout Testing | Yes | No |
+| Product Listing Testing | No | Yes |
+| Search and Filter Testing | No | Yes |
+| Sorting Testing | No | Yes |
+| Product Details Testing | No | Yes |
+| Cart Testing | No | Yes |
+| Checkout Testing | No | Yes |
+| Payment Testing | No | Yes |
 
-Xray is used to organize test cases, Test Sets, Test Plans, and Test Executions.
+Xray was used to organize and manage the test cases, Test Sets, Test Plan, and Test Execution.
 
-## 10. Sprint Completion
+### Testing Management Summary
 
-A Sprint is considered complete when its planned work has been reviewed and the relevant activities have been updated in Jira.
+| Component | Purpose |
+|---|---|
+| Test Cases | Define individual test scenarios and expected results. |
+| Test Sets | Group related test cases by functionality. |
+| Test Plan | Organize testing scope across the project. |
+| Test Execution | Manage test execution and result recording. |
+| Bug Management | Document and track identified defects. |
 
-Sprint completion should include:
+## 10. Sprint Completion Summary
 
-- Review of completed User Stories.
-- Verification of acceptance criteria.
-- Review of associated test cases.
-- Recording of testing results.
-- Documentation of identified defects.
-- Updating the Sprint status.
+Both Sprints were organized around their respective functional objectives.
+
+| Completion Metric | Sprint 1 | Sprint 2 | Total |
+|---|---:|---:|---:|
+| User Stories | 5 | 11 | 16 |
+| Sprint Status | Completed | Completed | Completed |
+
+### Final Project Activities
+
+- Reviewed the planned User Stories.
+- Organized functional requirements and acceptance criteria.
+- Prepared test cases for the application modules.
+- Organized test cases into Test Sets.
+- Created the Test Plan and Test Execution structure.
+- Maintained defect documentation.
+- Prepared Sprint and project summary documentation.
 
 ## 11. Conclusion
 
-The two-Sprint structure provides a systematic approach to organizing the ShopEasy QA project.
+The two-Sprint structure provided a systematic approach to organizing the ShopEasy QA project.
 
-Sprint 1 focuses on account management and authentication, while Sprint 2 covers product discovery and the shopping process.
+Sprint 1 covered account management and authentication, while Sprint 2 covered product discovery and the shopping process.
 
-This division makes the project easier to plan, monitor, and test using Jira Scrum and Xray.
+The project used Jira Scrum for backlog and Sprint management and Xray for test management.
+
+Both Sprints were organized around 16 User Stories across the application's major functional modules.
+
+This approach provided structured project planning, functional test coverage, defect documentation, and consolidated QA project reporting.
 
 ---
 
