@@ -3,7 +3,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class Practice1 {
     public static void main(String[] args) {
         ChromeDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
@@ -16,5 +16,4 @@ public class Main {
         driver.findElement(By.cssSelector("input[name='age']")).sendKeys("21");
         driver.close();
         }
-
 }
