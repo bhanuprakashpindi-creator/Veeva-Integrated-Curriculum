@@ -1,0 +1,57 @@
+User Name Entred
+Password Entered
+Login Successfull!
+Title :Swag Labs
+========== PRODUCT LIST ==========
+Sauce Labs Backpack
+Sauce Labs Bike Light
+Sauce Labs Bolt T-Shirt
+Sauce Labs Fleece Jacket
+Sauce Labs Onesie
+Test.allTheThings() T-Shirt (Red)
+Total Products :6
+Product Name : Sauce Labs Backpack
+Price :$29.99
+========== SHOPPING CART ==========
+Added: Sauce Labs Backpack
+Cart Count : 2
+Sauce Labs Backpack
+Sauce Labs Bike Light
+Cart verification: PASSED
+========== REMOVE PRODUCT ==========
+Removed: Sauce Labs Bike Light
+Cart Count: 1
+========== REMAINING PRODUCTS ==========
+Sauce Labs Backpack
+Final Cart Verification: PASSED
+
+========== CHECKOUT INFORMATION ==========
+Current URL: https://www.saucedemo.com/checkout-step-one.html
+Page Title: Swag Labs
+Checkout button clicked
+First Name : Bhanu Prakash
+Last Name : Pindi
+Postal Code: 534447
+
+Customer information submitted successfully!
+========== CHECKOUT OVERVIEW ==========
+Page Title :Swag Labs
+Heading: Checkout: Overview
+Checkout Verification: PASSED
+Products:
+Product: Sauce Labs Backpack
+========== PRODUCT PRICES ==========
+Price: $29.99
+========== PRICE SUMMARY ==========
+Item total: $29.99
+Tax: $2.40
+Total: $32.39
+Price Verification: PASSED
+========== ORDER CONFIRMATION ==========
+Confirmation: Thank you for your order!
+Discription: Your order has been dispatched, and will arrive just as fast as the pony can get there!
+Order Placed : PASSED
+=============== Logout=============
+Logout Successfull!!!
+
+Process finished with exit code 0
