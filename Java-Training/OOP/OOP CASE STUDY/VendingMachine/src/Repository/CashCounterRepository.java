@@ -47,7 +47,6 @@ public class CashCounterRepository {
                 denomination,
                 counter.get(denomination) + quantity
         );
-
         System.out.println("Currency Added Successfully!");
     }
     public HashMap<Integer,Long> getCounter()

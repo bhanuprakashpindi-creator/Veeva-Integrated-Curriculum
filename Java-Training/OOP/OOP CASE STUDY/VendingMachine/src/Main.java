@@ -18,6 +18,7 @@ public class Main {
 
     static CashCounterRepository cashCounterRepository =
             new CashCounterRepository();
+    static  CashCounterService cashCounterService=new CashCounterService(cashCounterRepository);
 
     static ProductService productService =
             new ProductService(productRepository);
@@ -42,6 +43,7 @@ public class Main {
             System.out.println("2. Add Item To Cart");
             System.out.println("3. Display Cart");
             System.out.println("4. Checkout");
+            System.out.println("5. Add Currency into Vending Machine");
             System.out.println("0. Exit");
 
             System.out.print("Enter Choice: ");
@@ -66,7 +68,9 @@ public class Main {
                 case 4:
                     cartService.checkout();
                     break;
-
+                case 5:
+                    cashCounterService.addCurency();
+                    break;
                 case 0:
                     System.out.println("Thank You!");
                     break;

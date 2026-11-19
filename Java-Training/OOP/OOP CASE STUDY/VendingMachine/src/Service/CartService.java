@@ -1,9 +1,6 @@
 package Service;
 
-import Exceptions.InsufficientProductQuantityException;
-import Exceptions.InvalidPaymentOptionException;
-import Exceptions.InvalidProductCodeException;
-import Exceptions.TransactionFailedException;
+import Exceptions.*;
 import Model.Product;
 import Repository.CartRepository;
 import Repository.CashCounterRepository;
@@ -79,7 +76,7 @@ public class CartService {
             long quantity = cartItems.get(code);
 
             if (!productRepository.isquanityAvailable(code, quantity)) {
-                throw new InsufficientProductQuantityException("Insufficient Stock For Product: " + code);
+                throw new SoldOutException("Insufficient Stock For Product: " + code);
             }
         }
 
