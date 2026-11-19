@@ -1,0 +1,161 @@
+"C:\Program Files\Eclipse Adoptium\jdk-21.0.11.10-hotspot\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.4.1\lib\idea_rt.jar=60498" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "D:\Veeva-Integrated-Cuirculum\Veeva-Integrated-Curriculum\Java-Training\OOP\OOP CASE STUDY\VendingMachine\out\production\VendingMachine" Main
+Mock Products Loaded Successfully!
+
+========== VENDING MACHINE ==========
++--------------------+ +--------------------+ +--------------------+
+| P104               | | P103               | | P106               |
+| Sprite             | | ThumsUp            | | Water              |
+| Rs.40.00           | | Rs.45.00           | | Rs.20.00           |
+| Stock: 12         | | Stock: 15         | | Stock: 20         |
++--------------------+ +--------------------+ +--------------------+
+
++--------------------+ +--------------------+ +--------------------+
+| P105               | | P102               | | P101               |
+| Fanta              | | Pepsi              | | Coke               |
+| Rs.35.00           | | Rs.40.00           | | Rs.40.00           |
+| Stock: 8          | | Stock: 10         | | Stock: 10         |
++--------------------+ +--------------------+ +--------------------+
+
++--------------------+ +--------------------+ +--------------------+
+| P108               | | P107               | | P109               |
+| Oreo               | | Lays               | | Dairy Milk         |
+| Rs.30.00           | | Rs.20.00           | | Rs.50.00           |
+| Stock: 7          | | Stock: 10         | | Stock: 6          |
++--------------------+ +--------------------+ +--------------------+
+
+
+========== VENDING MACHINE ==========
+1. Add Product
+2. Add Item To Cart
+3. Display Cart
+4. Checkout
+0. Exit
+Enter Choice: 2
+Enter Product Code: P101
+Enter Quantity: 5
+Item Added To Cart Successfully
+
+========== VENDING MACHINE ==========
+1. Add Product
+2. Add Item To Cart
+3. Display Cart
+4. Checkout
+0. Exit
+Enter Choice: 2
+Enter Product Code: P109
+Enter Quantity: 3
+Item Added To Cart Successfully
+
+========== VENDING MACHINE ==========
+1. Add Product
+2. Add Item To Cart
+3. Display Cart
+4. Checkout
+0. Exit
+Enter Choice: 2
+Enter Product Code: P103
+Enter Quantity: 7
+Item Added To Cart Successfully
+
+========== VENDING MACHINE ==========
+1. Add Product
+2. Add Item To Cart
+3. Display Cart
+4. Checkout
+0. Exit
+Enter Choice: 3
+Product Name: ThumsUp
+Product Price: 45.0
+Quantity: 7
+Product Name: Coke
+Product Price: 40.0
+Quantity: 5
+Product Name: Dairy Milk
+Product Price: 50.0
+Quantity: 3
+
+========== VENDING MACHINE ==========
+1. Add Product
+2. Add Item To Cart
+3. Display Cart
+4. Checkout
+0. Exit
+Enter Choice: 2
+Enter Product Code: P105
+Enter Quantity: 4
+Item Added To Cart Successfully
+
+========== VENDING MACHINE ==========
+1. Add Product
+2. Add Item To Cart
+3. Display Cart
+4. Checkout
+0. Exit
+Enter Choice: 4
+Product Name: ThumsUp
+Product Price: 45.0
+Quantity: 7
+Product Name: Fanta
+Product Price: 35.0
+Quantity: 4
+Product Name: Coke
+Product Price: 40.0
+Quantity: 5
+Product Name: Dairy Milk
+Product Price: 50.0
+Quantity: 3
+
+Total Bill Amount: 805.0
+
+1. Cash Payment
+2. Online UPI Payment
+3. Cancle Payment
+Select Payment Option: 1
+
+========== CASH COUNTER ==========
+Available Currency Notes / Coins
+----------------------------------
+Denomination  ->  Quantity
+Rs.500          ->  0
+Rs.200          ->  0
+Rs.100          ->  0
+Rs.50          ->  0
+Rs.20          ->  0
+Rs.10          ->  0
+Rs.5          ->  0
+Rs.2          ->  0
+Rs.1          ->  0
+----------------------------------
+
+========== CASH PAYMENT ==========
+Enter The Number Of Notes For Each Denomination
+Enter Number Of Rs.500 Notes: 1
+Enter Number Of Rs.200 Notes: 1
+Enter Number Of Rs.100 Notes: 1
+Enter Number Of Rs.50 Notes: 0
+Enter Number Of Rs.20 Notes: 0
+Enter Number Of Rs.10 Notes: 0
+Enter Number Of Rs.5 Notes: 1
+Enter Number Of Rs.2 Notes: 0
+Enter Number Of Rs.1 Notes: 0
+
+Total Cash Received: Rs.805.0
+Payment Completed Successfully!
+Cash Counter Updated Successfully!
+
+========== DISPENSING PRODUCTS ==========
+ThumsUp x 7 - Dispensed Successfully!
+Fanta x 4 - Dispensed Successfully!
+Coke x 5 - Dispensed Successfully!
+Dairy Milk x 3 - Dispensed Successfully!
+
+Cart Cleared Successfully!
+Thank You For Using Our Vending Machine!
+
+========== VENDING MACHINE ==========
+1. Add Product
+2. Add Item To Cart
+3. Display Cart
+4. Checkout
+0. Exit
+Enter Choice:
