@@ -1,0 +1,5 @@
+
+1. Construct array list of orders where each order contains order id, customer id, category, and amount spent.
+   Now develop a java application
+   1. To find out orders with amount less than or equal to zero.
+   2. Return top 3 highest spending customer IDs.

@@ -1,0 +1,4 @@
+create a tree set to store collection of employee records with attributes
+ like ID, name, salary.
+   Now create different tree sets to store collection of employee objects based on ID ascending order,
+    name ascending order, salary ascending order, and salary descending order.

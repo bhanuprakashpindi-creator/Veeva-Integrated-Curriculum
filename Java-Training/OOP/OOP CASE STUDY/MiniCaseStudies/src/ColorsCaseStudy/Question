@@ -1,0 +1,6 @@
+ Construct array list of strings representing colors.
+   Now,
+   find frequency of each color in array list, and finally
+   1. Find color with highest frequency
+   2. Color with lowest frequency
+   3. Colors with occurrence of K times.

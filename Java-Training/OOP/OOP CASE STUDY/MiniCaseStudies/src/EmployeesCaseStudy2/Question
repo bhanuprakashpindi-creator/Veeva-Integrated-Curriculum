@@ -1,0 +1,9 @@
+
+
+Create a tree map to store records of employees with ID as key and employee Object as value
+   the employee details include ID, name, salary.
+   Now,
+
+   1. Find total number of employees at any stage.
+   2. Details of first employee
+   3. Details of last employee
