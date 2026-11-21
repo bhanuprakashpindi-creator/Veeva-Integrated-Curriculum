@@ -1,0 +1,20 @@
+
+Case Study on OOP and Collections in java
+
+
+Student marks lookup System
+
+You are tasked with a Student marks lookup System. The system must store student names, student IDs as unique keys and corresponding object values. Each object should contains name, marks, grade.
+the system should allow fast O(1) insertion, updates, deletion and look-ups.
+
+Requirements:
+1. Store records
+   The system can store number of records dynamically.
+   If a student roll number already exists update marks only(don't update other things even given)
+2. Process Queries
+  The Query should be
+  1. Get <name> : Print details student if exists, if not exist raise exception student not found.
+  2. Get <ID>: Print marks of the student with given ID. If student not exists raise exception student not found.
+  3. Update <ID>: Given the student with ID, update his/her marks. If student not exist then insert new record.
+  4. Remove<ID>: Remove the student from the collection. If student not exist raise student not found exception.
+  5. Exists<ID>: Print true if student exists in the collection, otherwise false.

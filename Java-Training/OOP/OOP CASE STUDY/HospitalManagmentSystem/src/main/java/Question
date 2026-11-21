@@ -1,0 +1,9 @@
+ In a hospital emergency room patients await sequentially.
+    And they are treated based on priority rather than first come first serve.
+    Now construct a collection of patients with patient id, name, severity level(risk level),
+    and arrival time
+    severity level is an integer from 1 to 10. High number means High risk
+    Arrival time is also integer between 1 to 23, the low number means early arrival.
+    Now,
+    Display the patients based on severity level.
+    If two or more patients with more severity level then sort by arrival time
